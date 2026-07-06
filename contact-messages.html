@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Messages | Juice Admin</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/settings.css">
+
+<link rel="stylesheet" href="assets/css/admin-dark-mode.css">
+
+<style>
+.msg-preview {
+  max-width: 360px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+
+<!-- Left Side -->
+
+<div class="col-lg-3 sidebar">
+
+<div>
+
+<div class="logo">
+
+<div class="logo-icon">
+<i class="bi bi-cup-straw"></i>
+</div>
+
+<div>
+
+<h3>JuicyBar</h3>
+
+<p>ADMIN PANEL</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<h6>MAIN</h6>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="bi bi-grid"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="orders.html">
+<i class="bi bi-basket"></i>
+Orders
+</a>
+</li>
+
+<li class="active">
+<a href="contact-messages.html">
+<i class="bi bi-chat-left-text"></i>
+Contact Messages
+<span class="badge bg-danger rounded-pill" id="unreadBadge">3</span>
+</a>
+</li>
+
+</ul>
+
+<h6>MANAGE</h6>
+
+<ul>
+
+<li>
+<a href="juice-menu.html">
+<i class="bi bi-cup"></i>
+Juice Menu
+</a>
+</li>
+
+<li>
+<a href="smoothies.html">
+<i class="bi bi-cup-straw"></i>
+Smoothies
+</a>
+</li>
+
+<li>
+<a href="inventory.html">
+<i class="bi bi-box-seam"></i>
+Inventory
+</a>
+</li>
+
+</ul>
+
+<h6>ACCOUNT</h6>
+
+<ul>
+
+<li>
+<a href="settings.html">
+<i class="bi bi-gear"></i>
+Settings
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<div class="admin-box">
+
+<div class="avatar">
+A
+</div>
+
+<div>
+
+<h5>Admin</h5>
+
+<small>Super Admin</small>
+
+</div>
+
+</div>
+
+<a href="login.html" class="logout">
+<i class="bi bi-box-arrow-right"></i>
+Logout
+</a>
+
+</div>
+
+</div>
+
+<!-- Content -->
+
+<div class="col-lg-9 content">
+
+<div class="topbar">
+
+<div>
+
+<h2>Contact Messages</h2>
+
+<p>Messages submitted through the website's Contact page</p>
+
+</div>
+
+<div class="top-right">
+
+<div class="date">
+
+<i class="bi bi-calendar3"></i>
+
+30 June 2026
+
+</div>
+
+<button type="button" class="btn btn-outline-success theme-toggle-btn" title="Toggle dark mode">
+<i class="bi bi-moon-fill"></i>
+</button>
+
+<div class="notify">
+
+<i class="bi bi-bell-fill"></i>
+
+</div>
+
+<div class="profile">
+A
+</div>
+
+</div>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-12">
+
+<div class="card-box">
+
+<h4>
+<i class="bi bi-envelope-fill text-success"></i>
+Inbox
+</h4>
+
+<hr>
+
+<div class="table-responsive">
+
+<table class="table table-hover align-middle" id="messagesTable">
+
+<thead>
+
+<tr>
+
+<th>Email</th>
+
+<th>Message</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>oliviabennett@gmail.com</td>
+<td class="msg-preview">Hi, do you offer catering for weddings of 150+ guests? Looking to book for September.</td>
+<td>04 Jul 2026</td>
+<td><span class="badge bg-danger">New</span></td>
+<td>
+<button class="btn btn-success btn-sm"><i class="bi bi-eye"></i></button>
+<button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+</td>
+</tr>
+
+<tr>
+<td>marcus.tan@outlook.com</td>
+<td class="msg-preview">Loved the Berry Blast smoothie today, best one I've had all year! Will you add a large size?</td>
+<td>03 Jul 2026</td>
+<td><span class="badge bg-danger">New</span></td>
+<td>
+<button class="btn btn-success btn-sm"><i class="bi bi-eye"></i></button>
+<button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+</td>
+</tr>
+
+<tr>
+<td>priya.k@fastmail.com</td>
+<td class="msg-preview">Are any of your juices completely sugar-free? Managing a low-glycemic diet.</td>
+<td>02 Jul 2026</td>
+<td><span class="badge bg-danger">New</span></td>
+<td>
+<button class="btn btn-success btn-sm"><i class="bi bi-eye"></i></button>
+<button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+</td>
+</tr>
+
+<tr>
+<td>daniel.reyes@yahoo.com</td>
+<td class="msg-preview">Interested in a wholesale supply arrangement for our office pantry. Please send pricing.</td>
+<td>30 Jun 2026</td>
+<td><span class="badge bg-secondary">Read</span></td>
+<td>
+<button class="btn btn-success btn-sm"><i class="bi bi-eye"></i></button>
+<button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+</td>
+</tr>
+
+<tr>
+<td>hannah.wu@icloud.com</td>
+<td class="msg-preview">My order was missing the ginger shot I paid for. Could someone follow up?</td>
+<td>29 Jun 2026</td>
+<td><span class="badge bg-secondary">Read</span></td>
+<td>
+<button class="btn btn-success btn-sm"><i class="bi bi-eye"></i></button>
+<button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+</td>
+</tr>
+
+<tr>
+<td>samuel.okafor@gmail.com</td>
+<td class="msg-preview">What are your store hours on public holidays?</td>
+<td>27 Jun 2026</td>
+<td><span class="badge bg-secondary">Read</span></td>
+<td>
+<button class="btn btn-success btn-sm"><i class="bi bi-eye"></i></button>
+<button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin-theme.js"></script>
+<script src="js/admin-actions.js"></script>
+<script>
+(function () {
+  function updateUnreadBadge() {
+    var badge = document.getElementById("unreadBadge");
+    var newCount = document.querySelectorAll("#messagesTable tbody .badge.bg-danger").length;
+    if (newCount > 0) {
+      badge.textContent = newCount;
+      badge.style.display = "";
+    } else {
+      badge.style.display = "none";
+    }
+  }
+
+  document.getElementById("messagesTable").addEventListener("click", function () {
+    setTimeout(updateUnreadBadge, 0);
+  });
+
+  updateUnreadBadge();
+})();
+</script>
+
+</body>
+
+</html>
