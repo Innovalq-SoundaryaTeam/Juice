@@ -102,6 +102,13 @@ body.dark-mode .store-hours-strip {
 }
 .navbar-premium .navbar-toggler .fa-bars { color: var(--text); }
 
+@media (max-width: 991.98px) {
+  .navbar-premium .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 body.dark-mode #themeToggle,
 body.dark-mode #rtlToggle,
 body.dark-mode #cartToggle {
