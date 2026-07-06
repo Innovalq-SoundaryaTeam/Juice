@@ -207,6 +207,11 @@ body.dark-mode .input-group-text { background-color: var(--input-bg); color: var
 body.dark-mode .accordion-item {
   background-color: var(--card-bg);
   border-color: var(--border);
+  color: var(--text);
+}
+body.dark-mode .accordion-body {
+  color: var(--text);
+  background-color: var(--card-bg);
 }
 body.dark-mode .accordion-button {
   background-color: var(--card-bg);
