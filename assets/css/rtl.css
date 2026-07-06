@@ -103,11 +103,12 @@ body.dark-mode .store-hours-strip {
 .navbar-premium .navbar-toggler .fa-bars { color: var(--text); }
 
 body.dark-mode #themeToggle,
+body.dark-mode #rtlToggle,
 body.dark-mode #cartToggle {
   color: var(--text);
   border-color: var(--border);
 }
-#themeToggle, #cartToggle {
+#themeToggle, #rtlToggle, #cartToggle {
   border-radius: 50px;
   width: 42px;
   height: 42px;

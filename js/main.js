@@ -31,6 +31,57 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* ---------------------------------------------------------------------
+     1B. RIGHT-TO-LEFT (RTL) TOGGLE — only on customer-facing pages
+         (i.e. pages that have the navbar theme toggle)
+  --------------------------------------------------------------------- */
+  let rtlToggle = null;
+
+  if (themeToggle) {
+    rtlToggle = document.createElement("button");
+    rtlToggle.type = "button";
+    rtlToggle.id = "rtlToggle";
+    rtlToggle.className = themeToggle.className;
+    rtlToggle.setAttribute("title", "Toggle right-to-left layout");
+    rtlToggle.setAttribute("aria-label", "Toggle right-to-left layout");
+    rtlToggle.innerHTML = '<i class="fas fa-align-right"></i>';
+
+    themeToggle.parentNode.insertBefore(rtlToggle, themeToggle);
+
+    function findBootstrapLink() {
+      return Array.from(document.querySelectorAll('link[rel="stylesheet"]')).find((link) =>
+        /bootstrap(\.rtl)?\.min\.css/.test(link.href)
+      );
+    }
+
+    function applyDirection(dir) {
+      document.documentElement.setAttribute("dir", dir);
+      document.body.classList.toggle("rtl-mode", dir === "rtl");
+
+      const bsLink = findBootstrapLink();
+      if (bsLink) {
+        bsLink.href =
+          dir === "rtl"
+            ? bsLink.href.replace("bootstrap.min.css", "bootstrap.rtl.min.css")
+            : bsLink.href.replace("bootstrap.rtl.min.css", "bootstrap.min.css");
+      }
+
+      const icon = rtlToggle.querySelector("i");
+      if (icon) {
+        icon.classList.toggle("fa-align-right", dir !== "rtl");
+        icon.classList.toggle("fa-align-left", dir === "rtl");
+      }
+    }
+
+    applyDirection(localStorage.getItem("siteDirection") === "rtl" ? "rtl" : "ltr");
+
+    rtlToggle.addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("dir") === "rtl" ? "ltr" : "rtl";
+      localStorage.setItem("siteDirection", next);
+      applyDirection(next);
+    });
+  }
+
+  /* ---------------------------------------------------------------------
      2. CART — only wire up on pages that have the navbar theme toggle
         (i.e. the customer-facing site, not the admin panel)
   --------------------------------------------------------------------- */
@@ -83,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       '<i class="fas fa-basket-shopping"></i><span id="cartCount" class="cart-count">0</span>';
 
     themeToggle.parentNode.insertBefore(wrapper, themeToggle);
+    if (rtlToggle) wrapper.appendChild(rtlToggle);
     wrapper.appendChild(themeToggle);
     wrapper.appendChild(cartBtn);
 
