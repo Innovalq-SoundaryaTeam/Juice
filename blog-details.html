@@ -195,29 +195,38 @@
     <div class="mt-5">
       <h3>Leave a Comment</h3>
 
-      <form class="row g-3">
+      <form id="commentForm" class="row g-3" novalidate>
         <div class="col-md-6">
           <input type="text"
+                 id="commentName"
                  class="form-control"
-                 placeholder="Name">
+                 placeholder="Name"
+                 required>
         </div>
 
         <div class="col-md-6">
           <input type="email"
+                 id="commentEmail"
                  class="form-control"
-                 placeholder="Email">
+                 placeholder="Email"
+                 required>
         </div>
 
         <div class="col-12">
           <textarea class="form-control"
+                    id="commentText"
                     rows="5"
-                    placeholder="Comment"></textarea>
+                    placeholder="Comment"
+                    required></textarea>
         </div>
 
         <div class="col-12">
-          <button class="btn btn-success">
+          <button type="submit" class="btn btn-success">
             Submit Comment
           </button>
+          <div id="commentSuccessAlert" class="alert alert-success mt-3 mb-0 d-none" role="alert">
+            <i class="fas fa-circle-check me-2"></i>Your comment has been submitted successfully.
+          </div>
         </div>
       </form>
     </div>
@@ -357,6 +366,27 @@
       document.getElementById('postSubheading').textContent = post.subheading;
       document.getElementById('postParagraph1').textContent = post.p1;
       document.getElementById('postParagraph2').textContent = post.p2;
+
+      /* ---- Comment form submission ---- */
+      var commentForm = document.getElementById('commentForm');
+      var commentSuccessAlert = document.getElementById('commentSuccessAlert');
+
+      commentForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!commentForm.checkValidity()) {
+          commentForm.classList.add('was-validated');
+          return;
+        }
+
+        commentSuccessAlert.classList.remove('d-none');
+        commentForm.reset();
+        commentForm.classList.remove('was-validated');
+
+        setTimeout(function () {
+          commentSuccessAlert.classList.add('d-none');
+        }, 6000);
+      });
     });
   </script>
 
