@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Catering - Aura Juice Bar</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Store Hours Strip Component -->
+    <div class="store-hours-strip" role="note" aria-label="Store Hours Notification">
+        <i class="fas fa-clock me-2"></i> Energy Boost Hours: Monday - Sunday: 7:00 AM - 9:00 PM
+    </div>
+    
+ <header class="navbar-premium">
+    <nav
+      class="navbar navbar-expand-lg container"
+      aria-label="Main Navigation"
+    >
+      <a class="navbar-brand" href="index.html">JUICE</a>
+
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="combos.html">Combos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="catering.html">Catering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">HEALTH TIPS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog-details.html">Blog details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coming.html">Coming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="login.html">signIn</a>
+            </li>
+
+    
+        </ul>
+
+    <button id="themeToggle" class="btn btn-outline-success">
+  <i class="fas fa-moon"></i>
+</button>
+      </div>
+    </nav>
+  </header>
+
+<!-- Hero -->
+<section class="hero-catering">
+  <div class="container text-center">
+    <h1>Health Tips & Juice Blog</h1>
+    <p>Nutrition insights, detox guides and smoothie recipes.</p>
+  </div>
+</section>
+
+<!-- Filter Tabs -->
+<section class="py-4 bg-light">
+  <div class="container text-center">
+    <button class="btn btn-success m-1 blog-filter-btn" data-category="all">All</button>
+    <button class="btn btn-outline-success m-1 blog-filter-btn" data-category="nutrition">Nutrition</button>
+    <button class="btn btn-outline-success m-1 blog-filter-btn" data-category="detox">Detox</button>
+    <button class="btn btn-outline-success m-1 blog-filter-btn" data-category="recipes">Recipes</button>
+  </div>
+</section>
+
+<!-- Blog Content -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Articles -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+
+          <!-- No results message -->
+          <div class="col-12 d-none" id="blogNoResults">
+            <p class="text-center text-muted py-5">No articles found in this category yet.</p>
+          </div>
+
+          <!-- Article 1 -->
+          <div class="col-md-6 blog-article" data-category="detox">
+            <div class="card h-100">
+              <img src="assets/images/Detox Body.jpeg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h4>5 Benefits of Green Detox Juices</h4>
+                <p>Discover how leafy greens improve energy and wellness.</p>
+                <a href="blog-details.html?post=green-detox-juices" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-md-6 blog-article" data-category="nutrition">
+            <div class="card h-100">
+              <img src="assets/images/bf daily nutrition.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h4>Best Fruits for Daily Nutrition</h4>
+                <p>Boost immunity with nutrient-rich fruits.</p>
+                <a href="blog-details.html?post=fruits-daily-nutrition" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-md-6 blog-article" data-category="detox">
+            <div class="card h-100">
+              <img src="assets/images/mythsvsfacts.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h4>Detox Myths vs Facts</h4>
+                <p>Learn what detoxing really means.</p>
+                <a href="blog-details.html?post=detox-myths-facts" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="col-md-6 blog-article" data-category="recipes">
+            <div class="card h-100">
+              <img src="assets/images/BS recipe.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h4>Berry Blast Smoothie Recipe</h4>
+                <p>A refreshing recipe packed with antioxidants.</p>
+                <a href="blog-details.html?post=berry-blast-smoothie" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="col-md-6 blog-article" data-category="nutrition">
+            <div class="card h-100">
+              <img src="assets/images/red.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h4>Hydration and Fresh Juices</h4>
+                <p>Stay energized throughout the day naturally.</p>
+                <a href="blog-details.html?post=hydration-fresh-juices" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="col-md-6 blog-article" data-category="recipes">
+            <div class="card h-100">
+              <img src="assets/images/TS spotlight.png" class="card-img-top" alt="">
+              <div class="card-body">
+                <h4>Tropical Smoothie Spotlight</h4>
+                <p>Pineapple and mango goodness in one glass.</p>
+                <a href="blog-details.html?post=tropical-smoothie-spotlight" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="card p-4 mb-4">
+          <h4>Categories</h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item sidebar-category" data-category="nutrition" role="button">Nutrition</li>
+            <li class="list-group-item sidebar-category" data-category="detox" role="button">Detox</li>
+            <li class="list-group-item sidebar-category" data-category="recipes" role="button">Recipes</li>
+            <li class="list-group-item sidebar-category" data-category="wellness" role="button">Wellness</li>
+          </ul>
+        </div>
+
+        <div class="card p-4">
+          <h4>Popular Posts</h4>
+          <p>Green Detox Guide</p>
+          <p>Top Smoothie Recipes</p>
+          <p>Healthy Morning Drinks</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER START -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <h2 class="fw-bold"> JUICE </h2>
+          <p class="mt-4 text-muted">
+            Curating unforgettable moments through organic,
+            revitalizing ingredients. Discover a world of raw
+            vitality, cold-pressed cleanses, and timeless nourishment.
+          </p>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+          <h3 class="fw-bold fs-4">JUICE BAR</h3>
+          <ul class="list-unstyled mt-4">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Menu</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+          <h3 class="fw-bold fs-4">COLLECTIONS</h3>
+          <ul class="list-unstyled mt-4">
+            <li><a href="#">Fresh Smoothies</a></li>
+            <li><a href="#">Pressed Juices</a></li>
+            <li><a href="#">Detox Cleanses</a></li>
+            <li><a href="#">Ingredients</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 mb-4">
+          <h3 class="fw-bold fs-4">VISIT US</h3>
+
+          <p class="mt-4">
+            📍 456 Vitality Lane,<br>
+            London, UK
+          </p>
+
+          <p>📅 Open Daily: 7 AM - 8 PM</p>
+          <p>📞 +44 20 7946 0000</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="text-center pt-3">
+        © 2026 JUICE BAR. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Blog category filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var filterButtons = document.querySelectorAll('.blog-filter-btn');
+      var sidebarCategories = document.querySelectorAll('.sidebar-category');
+      var articles = document.querySelectorAll('.blog-article');
+      var noResults = document.getElementById('blogNoResults');
+
+      function setActiveButton(category) {
+        filterButtons.forEach(function (b) {
+          var isActive = b.dataset.category === category;
+          b.classList.toggle('btn-success', isActive);
+          b.classList.toggle('btn-outline-success', !isActive);
+        });
+      }
+
+      function filterByCategory(category) {
+        var visibleCount = 0;
+
+        articles.forEach(function (article) {
+          var match = category === 'all' || article.dataset.category === category;
+          article.style.display = match ? '' : 'none';
+          if (match) visibleCount++;
+        });
+
+        noResults.classList.toggle('d-none', visibleCount > 0);
+        setActiveButton(category);
+      }
+
+      filterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterByCategory(btn.dataset.category);
+        });
+      });
+
+      sidebarCategories.forEach(function (item) {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function () {
+          filterByCategory(item.dataset.category);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

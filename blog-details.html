@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Catering - Aura Juice Bar</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <style>
+    .related-post-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .related-post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Store Hours Strip Component -->
+    <div class="store-hours-strip" role="note" aria-label="Store Hours Notification">
+        <i class="fas fa-clock me-2"></i> Energy Boost Hours: Monday - Sunday: 7:00 AM - 9:00 PM
+    </div>
+    
+ <header class="navbar-premium">
+    <nav
+      class="navbar navbar-expand-lg container"
+      aria-label="Main Navigation"
+    >
+      <a class="navbar-brand" href="index.html">JUICE</a>
+
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="combos.html">Combos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="catering.html">Catering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">HEALTH TIPS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog-details.html">Blog details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coming.html">Coming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="login.html">signIn</a>
+            </li>
+        </ul>
+
+       <button id="themeToggle" class="btn btn-outline-success">
+  <i class="fas fa-moon"></i>
+</button>
+      </div>
+    </nav>
+  </header>
+
+<!-- Hero -->
+<section class="hero-catering">
+  <div class="container text-center">
+    <h1 id="postTitle">5 Benefits of Green Detox Juices</h1>
+    <p>Published by Aura Juice Bar</p>
+  </div>
+</section>
+
+<!-- Article -->
+<section class="py-5">
+  <div class="container">
+
+    <img id="postImage" src="assets/images/Detox Body.jpeg"
+         class="img-fluid rounded mb-4"
+         alt="">
+
+    <h2 id="postSubheading">Why Green Juices Matter</h2>
+
+    <p id="postParagraph1">
+      Green detox juices are packed with vitamins,
+      minerals and antioxidants that support overall health.
+      Ingredients such as spinach, kale and cucumber help
+      improve digestion and hydration.
+    </p>
+
+    <p id="postParagraph2">
+      Regular consumption may contribute to increased energy,
+      better nutrient intake and a healthier lifestyle.
+      Combining fresh fruits and vegetables creates a balanced
+      drink suitable for daily wellness routines.
+    </p>
+
+    <!-- Share -->
+    <div class="my-4">
+      <h4>Share This Article</h4>
+
+      <a href="#" class="btn btn-success me-2">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="#" class="btn btn-success me-2">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="#" class="btn btn-success">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+
+    <!-- Author -->
+    <div class="card p-4 my-5">
+      <h4>About the Author</h4>
+      <p>
+        Aura Juice Bar Wellness Team shares nutrition
+        tips, healthy recipes and juice insights.
+      </p>
+    </div>
+
+    <!-- Related Posts -->
+    <h3 class="mb-4">Related Posts</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <a href="blog-details.html?post=fruit-nutrition-guide" class="card text-decoration-none text-reset related-post-card">
+          <img src="assets/images/fruitguide.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Fruit Nutrition Guide</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="blog-details.html?post=detox-facts" class="card text-decoration-none text-reset related-post-card">
+          <img src="assets/images/detox facts.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Detox Facts</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="blog-details.html?post=berry-blast-smoothie" class="card text-decoration-none text-reset related-post-card">
+          <img src="assets/images/BS recipe.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Berry Smoothie Recipe</h5>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Comment Form -->
+    <div class="mt-5">
+      <h3>Leave a Comment</h3>
+
+      <form class="row g-3">
+        <div class="col-md-6">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Name">
+        </div>
+
+        <div class="col-md-6">
+          <input type="email"
+                 class="form-control"
+                 placeholder="Email">
+        </div>
+
+        <div class="col-12">
+          <textarea class="form-control"
+                    rows="5"
+                    placeholder="Comment"></textarea>
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-success">
+            Submit Comment
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+  <!-- FOOTER START -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <h2 class="fw-bold"> JUICE BAR</h2>
+          <p class="mt-4 text-muted">
+            Curating unforgettable moments through organic,
+            revitalizing ingredients. Discover a world of raw
+            vitality, cold-pressed cleanses, and timeless nourishment.
+          </p>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+          <h3 class="fw-bold fs-4">JUICE BAR</h3>
+          <ul class="list-unstyled mt-4">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Menu</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+          <h3 class="fw-bold fs-4">COLLECTIONS</h3>
+          <ul class="list-unstyled mt-4">
+            <li><a href="#">Fresh Smoothies</a></li>
+            <li><a href="#">Pressed Juices</a></li>
+            <li><a href="#">Detox Cleanses</a></li>
+            <li><a href="#">Ingredients</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 mb-4">
+          <h3 class="fw-bold fs-4">VISIT US</h3>
+
+          <p class="mt-4">
+            📍 456 Vitality Lane,<br>
+            London, UK
+          </p>
+
+          <p>📅 Open Daily: 7 AM - 8 PM</p>
+          <p>📞 +44 20 7946 0000</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="text-center pt-3">
+        © 2026 JUICE BAR. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Populate article content based on ?post= slug -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var posts = {
+        'green-detox-juices': {
+          title: '5 Benefits of Green Detox Juices',
+          image: 'assets/images/Detox Body.jpeg',
+          subheading: 'Why Green Juices Matter',
+          p1: 'Green detox juices are packed with vitamins, minerals and antioxidants that support overall health. Ingredients such as spinach, kale and cucumber help improve digestion and hydration.',
+          p2: 'Regular consumption may contribute to increased energy, better nutrient intake and a healthier lifestyle. Combining fresh fruits and vegetables creates a balanced drink suitable for daily wellness routines.'
+        },
+        'fruits-daily-nutrition': {
+          title: 'Best Fruits for Daily Nutrition',
+          image: 'assets/images/bf daily nutrition.png',
+          subheading: 'Boosting Immunity Naturally',
+          p1: 'Fruits like oranges, pomegranates and berries are rich sources of vitamin C, fiber and antioxidants. Adding a variety of colorful fruits to your daily juice rotation helps support a stronger immune system.',
+          p2: 'Pairing fruit with nuts or oats adds healthy fats, protein and slow-release carbs, making your juice or smoothie a more complete part of a balanced diet.'
+        },
+        'detox-myths-facts': {
+          title: 'Detox Myths vs Facts',
+          image: 'assets/images/mythsvsfacts.png',
+          subheading: 'Separating Fact From Fiction',
+          p1: 'A common myth is that juice cleanses alone can "remove toxins" from the body. In reality, your liver and kidneys are the primary organs responsible for detoxification, working around the clock regardless of diet.',
+          p2: 'That said, cold-pressed juices can still be a great way to add hydration, vitamins and whole-food nutrients to your routine — just not a substitute for your body\'s own detox systems.'
+        },
+        'berry-blast-smoothie': {
+          title: 'Berry Blast Smoothie Recipe',
+          image: 'assets/images/BS recipe.png',
+          subheading: 'A Refreshing Antioxidant Boost',
+          p1: 'This recipe blends strawberries, blueberries and raspberries with oats and a scoop of protein for a filling, nutrient-dense smoothie. Chia seeds add omega-3s and a pleasant texture.',
+          p2: 'Try it as a post-workout recovery drink or a quick, wholesome breakfast when you are short on time.'
+        },
+        'hydration-fresh-juices': {
+          title: 'Hydration and Fresh Juices',
+          image: 'assets/images/red.png',
+          subheading: 'Staying Energized Naturally',
+          p1: 'Proper hydration affects everything from energy levels to focus. Fresh juices made from water-rich fruits and vegetables like watermelon, cucumber and citrus can help supplement your daily fluid intake.',
+          p2: 'Unlike sugary sodas, fresh juice delivers hydration alongside vitamins, minerals and natural plant compounds that support overall wellness.'
+        },
+        'tropical-smoothie-spotlight': {
+          title: 'Tropical Smoothie Spotlight',
+          image: 'assets/images/TS spotlight.png',
+          subheading: 'Pineapple & Mango Goodness',
+          p1: 'This tropical blend combines pineapple, mango and a splash of coconut milk for a naturally sweet, vitamin-rich smoothie that tastes like a vacation in a glass.',
+          p2: 'Pineapple contains bromelain, an enzyme that may support digestion, while mango adds a generous dose of vitamin A and C.'
+        },
+        'fruit-nutrition-guide': {
+          title: 'Fruit Nutrition Guide',
+          image: 'assets/images/fruitguide.png',
+          subheading: 'A Quick Reference for Fruit Nutrients',
+          p1: 'From guava\'s high vitamin C content to the fiber found in berries, different fruits offer different nutritional strengths. Rotating a variety of fruits in your juices helps cover a broader range of vitamins and minerals.',
+          p2: 'Use this guide as a starting point to build juice combinations tailored to your specific wellness goals, whether that\'s immunity, digestion or energy.'
+        },
+        'detox-facts': {
+          title: 'Detox Facts',
+          image: 'assets/images/detox facts.png',
+          subheading: 'What Detoxing Actually Does',
+          p1: 'Ingredients like dragon fruit are rich in antioxidants called betalains, which may help protect cells from oxidative stress, alongside fiber that supports digestive health.',
+          p2: 'While no single juice can "detox" the body on its own, nutrient-dense ingredients like these are a great complement to your liver and kidneys\' natural detoxification processes.'
+        }
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get('post');
+      var post = posts[slug] || posts['green-detox-juices'];
+
+      document.title = post.title + ' - Aura Juice Bar';
+      document.getElementById('postTitle').textContent = post.title;
+      document.getElementById('postImage').src = post.image;
+      document.getElementById('postImage').alt = post.title;
+      document.getElementById('postSubheading').textContent = post.subheading;
+      document.getElementById('postParagraph1').textContent = post.p1;
+      document.getElementById('postParagraph2').textContent = post.p2;
+    });
+  </script>
+
+</body>
+</html>

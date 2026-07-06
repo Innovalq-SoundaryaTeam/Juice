@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuiceBar | Premium Organic Cold-Pressed Vitality</title>
+    <meta
+      name="description"
+      content="Where raw botanical integrity meets premium liquid health engineering. Fresh cold-pressed daily extracts."
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/rtl.css" />
+    <!-- <link rel="stylesheet" href="assets/css/dark-mode.css" /> -->
+
+    <style>
+      /* Editorial layout helpers using standard font fallbacks if main css isn't compiled yet */
+      .font-serif-editorial {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .font-serif-bold-display {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .tracking-luxury {
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      .btn-premium-dark {
+        background-color: #198754;
+        color: #fff;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+      }
+      .btn-premium-dark:hover {
+        background-color: #146c43;
+        color: #fff;
+      }
+      .btn-premium-outline {
+        background-color: transparent;
+        color: #198754;
+        border: 1px solid #198754;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        padding: 12px 30px;
+        transition: all 0.3s ease;
+      }
+      .btn-premium-outline:hover {
+        background-color: #198754;
+        color: #fff;
+      }
+
+      .feature-border-start {
+        border-start-style: solid;
+        border-left: 1px solid #d3d3d3;
+        padding-left: 20px;
+      }
+
+      .package-card {
+        transition: all 0.2s ease;
+        position: relative;
+      }
+      .package-card.package-selected {
+        border: 2px solid #198754 !important;
+        box-shadow: 0 10px 25px rgba(25, 135, 84, 0.25);
+      }
+      .package-card .selected-badge {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #198754;
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+      .package-card.package-selected .selected-badge {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Store Hours Strip Component -->
+    <div class="store-hours-strip" role="note" aria-label="Store Hours Notification">
+        <i class="fas fa-clock me-2"></i> Energy Boost Hours: Monday - Sunday: 7:00 AM - 9:00 PM
+    </div>
+
+    <!-- MAIN BRAND NAVBAR -->
+    <header class="navbar-premium">
+      <nav
+        class="navbar navbar-expand-lg container"
+        aria-label="Main Navigation"
+      >
+        <a class="navbar-brand" href="index.html">JUICE</a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- Nav Links in exact case configuration -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="combos.html">Combos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catering.html">Catering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html"> HEALTH TIPS</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="blog-details.html">Blog details</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coming.html">Coming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="login.html">signIn</a>
+            </li>
+  
+            
+          </ul>
+
+          <!-- Boxed UI Controls & Accent User Icon -->
+         <button id="themeToggle" class="btn btn-outline-success">
+  <i class="fas fa-moon"></i>
+</button>
+        </div>
+      </nav>
+    </header>
+  <!-- PASTE YOUR CATERING SECTIONS HERE -->
+<!-- Hero Section -->
+<section class="hero-catering">
+  <div class="container text-center">
+    <h1>Premium Juice Catering</h1>
+    <p>
+      Fresh juices, smoothies, and wellness drinks for every occasion.
+    </p>
+  </div>
+</section>
+
+<!-- We Cater For -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">We Cater For...</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+          <h4>🏢 Offices</h4>
+          <p>Healthy beverage stations for meetings and corporate events.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+          <h4>🎉 Parties</h4>
+          <p>Fresh juice bars that add color and fun to celebrations.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 text-center p-4">
+          <h4>💍 Weddings</h4>
+          <p>Elegant drink counters with premium fruit selections.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 text-center p-4">
+          <h4>🎪 Events</h4>
+          <p>Custom beverage packages for exhibitions and gatherings.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 text-center p-4">
+          <h4>🌿 Retreats</h4>
+          <p>Wellness-focused juice and smoothie options for retreats.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catering Packages -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Catering Packages</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card package-card h-100 text-center p-4">
+          <span class="selected-badge"><i class="fas fa-check me-1"></i>Selected</span>
+          <h3>Starter Package</h3>
+          <h4 class="my-3">$99</h4>
+          <p>20 Drinks Included</p>
+          <p>3 Juice Varieties</p>
+          <p>Basic Serving Setup</p>
+          <button type="button" class="btn btn-outline-success mt-2 select-package-btn" data-package="Starter Package ($99)">Select Package</button>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card package-card h-100 text-center p-4 border-success">
+          <span class="selected-badge"><i class="fas fa-check me-1"></i>Selected</span>
+          <h3>Premium Package</h3>
+          <h4 class="my-3">$199</h4>
+          <p>50 Drinks Included</p>
+          <p>5 Juice & Smoothie Varieties</p>
+          <p>Decorated Service Station</p>
+          <button type="button" class="btn btn-outline-success mt-2 select-package-btn" data-package="Premium Package ($199)">Select Package</button>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card package-card h-100 text-center p-4">
+          <span class="selected-badge"><i class="fas fa-check me-1"></i>Selected</span>
+          <h3>Luxury Package</h3>
+          <h4 class="my-3">$349</h4>
+          <p>100 Drinks Included</p>
+          <p>Unlimited Flavor Options</p>
+          <p>Full Juice Bar Setup</p>
+          <button type="button" class="btn btn-outline-success mt-2 select-package-btn" data-package="Luxury Package ($349)">Select Package</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How To Book -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">How To Book</h2>
+    </div>
+
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h1>1</h1>
+          <h5>Submit Enquiry</h5>
+          <p>Fill in your event details and requirements.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h1>2</h1>
+          <h5>Receive Quote</h5>
+          <p>We'll provide a customized package and pricing.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h1>3</h1>
+          <h5>Confirm Booking</h5>
+          <p>Secure your date and enjoy a hassle-free event.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catering Form -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Catering Enquiry Form</h2>
+    </div>
+
+    <div class="text-center mb-4">
+      <span id="selectedPackageDisplay" class="badge bg-secondary-subtle text-success-emphasis border border-success px-3 py-2">No package selected yet — pick one above</span>
+    </div>
+
+    <form id="cateringForm" class="row g-4">
+      <input type="hidden" id="selectedPackageInput" name="package">
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Name" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Company / Event" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="date" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="number" class="form-control" placeholder="Guest Count" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Preferred Drinks">
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Budget">
+      </div>
+
+      <div class="col-md-12">
+        <input type="tel" class="form-control" placeholder="Phone Number" required>
+      </div>
+
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-success px-5">
+          Submit Enquiry
+        </button>
+      </div>
+
+      <div class="col-12">
+        <div id="enquirySuccessAlert" class="alert alert-success text-center mb-0 d-none" role="alert">
+          <i class="fas fa-circle-check me-2"></i>Thank you! Your catering enquiry has been submitted successfully. We'll be in touch shortly.
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq1">
+            How far in advance should I book?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            We recommend booking at least 1–2 weeks before your event.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq2">
+            Can I customize the drinks menu?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, all packages can be customized to your needs.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq3">
+            Do you provide staff for events?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Premium and Luxury packages include serving staff.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq4">
+            What areas do you serve?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            We serve the city and surrounding regions.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq5">
+            Do you offer vegan or sugar-free options?
+          </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes, we provide vegan, sugar-free, and wellness-focused drinks.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER START -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <h2 class="fw-bold"> JUICE </h2>
+          <p class="mt-4 text-muted">
+            Curating unforgettable moments through organic,
+            revitalizing ingredients. Discover a world of raw
+            vitality, cold-pressed cleanses, and timeless nourishment.
+          </p>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+          <h3 class="fw-bold fs-4">JUICE BAR</h3>
+          <ul class="list-unstyled mt-4">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Menu</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 mb-4">
+          <h3 class="fw-bold fs-4">COLLECTIONS</h3>
+          <ul class="list-unstyled mt-4">
+            <li><a href="#">Fresh Smoothies</a></li>
+            <li><a href="#">Pressed Juices</a></li>
+            <li><a href="#">Detox Cleanses</a></li>
+            <li><a href="#">Ingredients</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 mb-4">
+          <h3 class="fw-bold fs-4">VISIT US</h3>
+
+          <p class="mt-4">
+            📍 456 Vitality Lane,<br>
+            London, UK
+          </p>
+
+          <p>📅 Open Daily: 7 AM - 8 PM</p>
+          <p>📞 +44 20 7946 0000</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="text-center pt-3">
+        © 2026 JUICE BAR. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Catering package selection + enquiry form submission -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var packageButtons = document.querySelectorAll('.select-package-btn');
+      var selectedDisplay = document.getElementById('selectedPackageDisplay');
+      var selectedInput = document.getElementById('selectedPackageInput');
+      var form = document.getElementById('cateringForm');
+      var successAlert = document.getElementById('enquirySuccessAlert');
+
+      function selectPackage(btn) {
+        var pkg = btn.dataset.package;
+
+        packageButtons.forEach(function (b) {
+          b.closest('.package-card').classList.remove('package-selected');
+          b.textContent = 'Select Package';
+          b.classList.remove('btn-success');
+          b.classList.add('btn-outline-success');
+        });
+
+        btn.closest('.package-card').classList.add('package-selected');
+        btn.textContent = 'Selected';
+        btn.classList.remove('btn-outline-success');
+        btn.classList.add('btn-success');
+
+        selectedInput.value = pkg;
+        selectedDisplay.textContent = 'Selected Package: ' + pkg;
+      }
+
+      function resetPackageSelection() {
+        packageButtons.forEach(function (b) {
+          b.closest('.package-card').classList.remove('package-selected');
+          b.textContent = 'Select Package';
+          b.classList.remove('btn-success');
+          b.classList.add('btn-outline-success');
+        });
+        selectedInput.value = '';
+        selectedDisplay.textContent = 'No package selected yet — pick one above';
+      }
+
+      packageButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          selectPackage(btn);
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        successAlert.classList.remove('d-none');
+        form.reset();
+        resetPackageSelection();
+
+        setTimeout(function () {
+          successAlert.classList.add('d-none');
+        }, 6000);
+      });
+    });
+  </script>
+
+</body>
+</html>

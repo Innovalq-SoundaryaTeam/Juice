@@ -1,0 +1,11 @@
+CREDITS
+
+Project Name: Juice & Smoothie Website
+
+Resources Used:
+- Bootstrap (getbootstrap.com)
+- Google Fonts (fonts.google.com)
+- Free stock images (unsplash.com / pexels.com)
+
+Special Thanks:
+- UI inspiration from modern food & beverage dashboards

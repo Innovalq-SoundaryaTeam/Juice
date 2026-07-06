@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orders | JuiceBar Admin</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/admin-dark-mode.css">
+
+<style>
+
+body{
+    background:#f5f7fb;
+    font-family:Segoe UI,sans-serif;
+}
+
+.page-title{
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.order-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.table th{
+    background:#198754;
+    color:#fff;
+    border:none;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+.search-box{
+    max-width:300px;
+}
+
+.status{
+    padding:6px 15px;
+    border-radius:30px;
+    font-size:14px;
+    color:#fff;
+    font-weight:600;
+}
+
+.pending{
+    background:#ffc107;
+    color:#000;
+}
+
+.completed{
+    background:#198754;
+}
+
+.cancelled{
+    background:#dc3545;
+}
+
+.btn-view{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.btn-edit{
+    background:#ff9800;
+    color:#fff;
+}
+
+.btn-delete{
+    background:#dc3545;
+    color:#fff;
+}
+
+.btn-view:hover,
+.btn-edit:hover,
+.btn-delete:hover{
+    color:#fff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container py-5">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<div>
+<h2 class="page-title">Orders Management</h2>
+<p class="text-muted">Manage customer juice & smoothie orders</p>
+</div>
+
+<div class="d-flex align-items-center gap-2">
+
+<button type="button" class="btn btn-outline-success theme-toggle-btn" title="Toggle dark mode">
+<i class="bi bi-moon-fill"></i>
+</button>
+
+<a href="dashboard.html" class="btn btn-success">
+<i class="bi bi-arrow-left"></i>
+Dashboard
+</a>
+
+</div>
+
+</div>
+
+<div class="order-card">
+
+<div class="row mb-4">
+
+<div class="col-md-4">
+<input type="text" id="orderSearchInput" class="form-control search-box" placeholder="Search Order...">
+</div>
+
+<div class="col-md-3">
+<select id="orderStatusFilter" class="form-select">
+<option value="all">All Orders</option>
+<option value="pending">Pending</option>
+<option value="completed">Completed</option>
+<option value="cancelled">Cancelled</option>
+</select>
+</div>
+
+</div>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-hover align-middle" id="ordersTable">
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Customer</th>
+
+<th>Product</th>
+
+<th>Quantity</th>
+
+<th>Total</th>
+
+<th>Status</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#1001</td>
+
+<td>John</td>
+
+<td>Mango Smoothie</td>
+
+<td>2</td>
+
+<td>$12</td>
+
+<td><span class="status completed">Completed</span></td>
+
+<td>30 Jun 2026</td>
+
+<td>
+
+<button class="btn btn-view btn-sm">
+<i class="bi bi-eye"></i>
+</button>
+
+<button class="btn btn-edit btn-sm">
+<i class="bi bi-pencil"></i>
+</button>
+
+<button class="btn btn-delete btn-sm">
+<i class="bi bi-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1002</td>
+
+<td>David</td>
+
+<td>Orange Juice</td>
+
+<td>1</td>
+
+<td>$6</td>
+
+<td><span class="status pending">Pending</span></td>
+
+<td>30 Jun 2026</td>
+
+<td>
+
+<button class="btn btn-view btn-sm">
+<i class="bi bi-eye"></i>
+</button>
+
+<button class="btn btn-edit btn-sm">
+<i class="bi bi-pencil"></i>
+</button>
+
+<button class="btn btn-delete btn-sm">
+<i class="bi bi-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1003</td>
+
+<td>Emma</td>
+
+<td>Berry Smoothie</td>
+
+<td>3</td>
+
+<td>$18</td>
+
+<td><span class="status cancelled">Cancelled</span></td>
+
+<td>29 Jun 2026</td>
+
+<td>
+
+<button class="btn btn-view btn-sm">
+<i class="bi bi-eye"></i>
+</button>
+
+<button class="btn btn-edit btn-sm">
+<i class="bi bi-pencil"></i>
+</button>
+
+<button class="btn btn-delete btn-sm">
+<i class="bi bi-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1004</td>
+
+<td>Michael</td>
+
+<td>Watermelon Juice</td>
+
+<td>2</td>
+
+<td>$10</td>
+
+<td><span class="status completed">Completed</span></td>
+
+<td>29 Jun 2026</td>
+
+<td>
+
+<button class="btn btn-view btn-sm">
+<i class="bi bi-eye"></i>
+</button>
+
+<button class="btn btn-edit btn-sm">
+<i class="bi bi-pencil"></i>
+</button>
+
+<button class="btn btn-delete btn-sm">
+<i class="bi bi-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1005</td>
+
+<td>Sophia</td>
+
+<td>Pineapple Juice</td>
+
+<td>1</td>
+
+<td>$7</td>
+
+<td><span class="status pending">Pending</span></td>
+
+<td>28 Jun 2026</td>
+
+<td>
+
+<button class="btn btn-view btn-sm">
+<i class="bi bi-eye"></i>
+</button>
+
+<button class="btn btn-edit btn-sm">
+<i class="bi bi-pencil"></i>
+</button>
+
+<button class="btn btn-delete btn-sm">
+<i class="bi bi-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/admin-theme.js"></script>
+<script src="js/admin-actions.js"></script>
+<script>
+(function () {
+    var searchInput = document.getElementById("orderSearchInput");
+    var statusFilter = document.getElementById("orderStatusFilter");
+    var rows = document.querySelectorAll("#ordersTable tbody tr");
+
+    function applyFilters() {
+        var query = searchInput.value.trim().toLowerCase();
+        var status = statusFilter.value;
+
+        rows.forEach(function (row) {
+            var text = row.textContent.toLowerCase();
+            var statusEl = row.querySelector(".status");
+            var rowStatus = statusEl ? statusEl.textContent.trim().toLowerCase() : "";
+
+            var matchesSearch = !query || text.includes(query);
+            var matchesStatus = status === "all" || rowStatus === status;
+
+            row.style.display = matchesSearch && matchesStatus ? "" : "none";
+        });
+    }
+
+    searchInput.addEventListener("input", applyFilters);
+    statusFilter.addEventListener("change", applyFilters);
+})();
+</script>
+
+</body>
+</html>

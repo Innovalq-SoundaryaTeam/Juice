@@ -1,0 +1,342 @@
+/* ==========================================================================
+   JUICE BAR — SHARED STYLESHEET
+   Handles: brand theme tokens, light/dark mode, shared components,
+   navbar/footer polish, and the cart UI.
+   ========================================================================== */
+
+:root {
+  --brand: #198754;
+  --brand-dark: #146c43;
+  --brand-light: #e9f7ef;
+
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --card-bg: #ffffff;
+  --border: #e9ecef;
+  --navbar-bg: #ffffff;
+  --footer-bg: #f8f9fa;
+  --input-bg: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Dark theme tokens ---------- */
+body.dark-mode {
+  --bg: #101814;
+  --bg-alt: #16211b;
+  --text: #eef2f0;
+  --text-muted: #a9b6b0;
+  --card-bg: #182420;
+  --border: #29372f;
+  --navbar-bg: #0d1512;
+  --footer-bg: #0d1512;
+  --input-bg: #1c2a24;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Base ---------- */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.dark-mode a { color: var(--text); }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 { color: var(--text) !important; }
+
+body.dark-mode .text-dark { color: var(--text) !important; }
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary { color: var(--text-muted) !important; }
+body.dark-mode .text-black { color: var(--text) !important; }
+
+body.dark-mode .bg-white { background-color: var(--card-bg) !important; }
+body.dark-mode .bg-light { background-color: var(--bg-alt) !important; color: var(--text); }
+body.dark-mode hr { border-color: var(--border); opacity: 1; }
+
+/* ---------- Top announcement bar ---------- */
+.top-bar,
+.store-hours-strip {
+  background-color: var(--brand);
+  color: #fff;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.store-hours-strip { padding: 10px 20px; }
+body.dark-mode .top-bar,
+body.dark-mode .store-hours-strip {
+  background-color: #0c3d24;
+  color: #d9f5e6;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-premium {
+  background-color: var(--navbar-bg);
+  box-shadow: var(--shadow);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+.navbar-premium .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--brand) !important;
+  font-family: "Playfair Display", serif;
+}
+.navbar-premium .nav-link {
+  color: var(--text) !important;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.navbar-premium .nav-link:hover,
+.navbar-premium .nav-link.active {
+  color: var(--brand) !important;
+}
+.navbar-premium .navbar-toggler .fa-bars { color: var(--text); }
+
+body.dark-mode #themeToggle,
+body.dark-mode #cartToggle {
+  color: var(--text);
+  border-color: var(--border);
+}
+#themeToggle, #cartToggle {
+  border-radius: 50px;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#cartToggle .cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #dc3545;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* ---------- Hero sections ---------- */
+.hero-catering {
+  background: linear-gradient(135deg, var(--brand) 0%, #12693f 100%);
+  color: #fff;
+  padding: 90px 0;
+  text-align: center;
+}
+.hero-catering h1 { color: #fff; font-weight: 700; }
+.hero-catering p { color: rgba(255, 255, 255, 0.9); font-size: 1.05rem; }
+
+.hero-section
+body.dark-mode .hero-section.bg-success { background-color: #0e5132 !important; }
+
+/* ---------- Soft-masked editorial hero (about.html) ---------- */
+.hero-soft-editorial {
+  background:
+    linear-gradient(rgba(243, 235, 233, 0.85), rgba(243, 235, 233, 0.85)),
+    url('../images/hero4.png') no-repeat center center;
+  background-size: cover;
+}
+body.dark-mode .hero-soft-editorial {
+  background:
+    linear-gradient(rgba(16, 24, 20, 0.82), rgba(16, 24, 20, 0.82)),
+    url('../images/hero4.png') no-repeat center center;
+  background-size: cover;
+}
+body.dark-mode .hero-soft-editorial .vertical-divider {
+  background-color: var(--text-muted);
+}
+
+/* ---------- Section helpers ---------- */
+.section-padding { padding-top: 20px; padding-bottom: 20px; }
+
+/* ---------- Cards ---------- */
+.card {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+body.dark-mode .card { box-shadow: var(--shadow); }
+body.dark-mode .badge.bg-light {
+  background-color: #24332b !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* ---------- Forms ---------- */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: var(--input-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+body.dark-mode .form-control::placeholder { color: var(--text-muted); }
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: var(--input-bg);
+  color: var(--text);
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+body.dark-mode .input-group-text { background-color: var(--input-bg); color: var(--text); border-color: var(--border); }
+
+/* ---------- Accordion ---------- */
+body.dark-mode .accordion-item {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+}
+body.dark-mode .accordion-button {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: var(--brand-light);
+  color: #0d3b23;
+}
+body.dark-mode .accordion-button::after { filter: invert(1); }
+
+/* ---------- Footer ---------- */
+footer.bg-light {
+  background-color: var(--footer-bg) !important;
+  color: var(--text-muted);
+}
+footer.bg-light h2, footer.bg-light h3 { color: var(--text); }
+footer.bg-light a { color: var(--text-muted); text-decoration: none; }
+footer.bg-light a:hover { color: var(--brand); }
+
+/* ---------- Coming soon page ---------- */
+
+.count-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 10px;
+  box-shadow: var(--shadow);
+}
+.count-box h2 { color: var(--brand); font-weight: 700; margin-bottom: 4px; }
+.count-box p { margin: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+.signup-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
+/* ---------- Quote overlay (about/coming) ---------- */
+body.dark-mode .quote-overlay-box { background-color: var(--brand-dark); }
+
+/* ---------- Buttons ---------- */
+body.dark-mode .btn-outline-success { color: #6fe3a5; border-color: #6fe3a5; }
+body.dark-mode .btn-outline-success:hover { background-color: var(--brand); color: #fff; }
+
+/* ---------- Contact form submit (Transmit Notes) ---------- */
+.btn-custom-primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.btn-custom-primary:hover,
+.btn-custom-primary:focus {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: #fff;
+}
+
+/* ==========================================================================
+   CART MODAL & TOAST
+   ========================================================================== */
+#cartModal .modal-content {
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: none;
+  border-radius: 14px;
+}
+#cartModal .modal-header,
+#cartModal .modal-footer {
+  border-color: var(--border);
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cart-item:last-child { border-bottom: none; }
+.cart-item-info { flex: 1; }
+.cart-item-info h6 { margin: 0 0 4px; font-weight: 600; }
+.cart-item-info small { color: var(--text-muted); }
+.cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cart-qty button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  line-height: 1;
+  font-weight: 600;
+}
+.cart-qty button:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+.cart-remove-btn {
+  border: none;
+  background: transparent;
+  color: #dc3545;
+  font-size: 1rem;
+}
+.cart-empty {
+  text-align: center;
+  padding: 40px 10px;
+  color: var(--text-muted);
+}
+.cart-empty i { font-size: 2.5rem; color: var(--border); margin-bottom: 10px; display: block; }
+
+#cartToastWrap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1080;
+}
+.cart-toast {
+  background-color: var(--brand);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow);
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: cartToastIn 0.25s ease;
+}
+@keyframes cartToastIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.add-to-cart-btn { white-space: nowrap; }

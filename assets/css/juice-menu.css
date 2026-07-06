@@ -1,0 +1,183 @@
+/* ==========================
+   PAGE
+========================== */
+
+body{
+    background:#ffffff;
+    color:#212529;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    background:#fff;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    padding:25px;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+.table{
+    color:#333;
+}
+
+.table th{
+    background:#198754;
+    color:#fff;
+    border:none;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+.table-hover tbody tr:hover{
+    background:#e9f8ef;
+}
+
+/* ==========================
+   SEARCH
+========================== */
+
+.form-control,
+.form-select{
+    border:1px solid #ced4da;
+    border-radius:10px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#198754;
+    box-shadow:0 0 0 .15rem rgba(25,135,84,.25);
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn-success{
+    background:#198754;
+    border:none;
+}
+
+.btn-success:hover{
+    background:#157347;
+}
+
+.btn-primary{
+    background:#198754;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#157347;
+}
+
+.btn-warning{
+    color:#fff;
+}
+
+.btn-warning:hover{
+    color:#fff;
+}
+
+/* ==========================
+   BADGES
+========================== */
+
+.badge.bg-success{
+    background:#198754 !important;
+}
+
+/* ==========================
+   IMAGES
+========================== */
+
+table img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+h2{
+    color:#198754;
+    font-weight:700;
+}
+
+p{
+    color:#6c757d;
+}
+
+/* ==========================
+   ACTION BUTTONS
+========================== */
+
+.action-btn{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:8px;
+    margin-right:5px;
+    transition:.3s;
+}
+
+.view-btn{
+    background:#198754;
+    color:#fff;
+}
+
+.view-btn:hover{
+    background:#157347;
+}
+
+.edit-btn{
+    background:#ffc107;
+    color:#fff;
+}
+
+.edit-btn:hover{
+    background:#e0a800;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+    color:#198754;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#157347;
+}
+
+/* ==========================
+   HOVER EFFECT
+========================== */
+
+.card:hover{
+    transform:translateY(-5px);
+    transition:.3s;
+}

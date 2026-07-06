@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Fresh & Vital Juice and Smoothie Bar</title>
+    <meta name="description" content="Explore our menu of cold-pressed juices, superfood smoothies, and functional wellness shots.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Shared Style Asset Paths -->
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- Store Hours Strip Component -->
+    <div class="store-hours-strip" role="note" aria-label="Store Hours Notification">
+        <i class="fas fa-clock me-2"></i> Energy Boost Hours: Monday - Sunday: 7:00 AM - 9:00 PM
+    </div>
+
+    <!-- Navigation Header -->
+   <header class="navbar-premium">
+      <nav
+        class="navbar navbar-expand-lg container"
+        aria-label="Main Navigation"
+      >
+        <a class="navbar-brand" href="index.html">JUICE</a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- Nav Links in exact case configuration -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="combos.html">Combos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catering.html">Catering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Health Tips</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="blog-details.html">Blog details </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coming.html">Coming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">signin</a>
+            </li>
+    
+          </ul>
+
+          <!-- Boxed UI Controls & Accent User Icon -->
+         <button id="themeToggle" class="btn btn-outline-success">
+  <i class="fas fa-moon"></i>
+</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+        <!-- Menu Hero Header -->
+        <section class="hero-section bg-success text-white text-center py-5">
+            <div class="container py-4">
+                <h1 class="display-4 text-white mb-3">Crafted Liquid Nutrition</h1>
+                <p class="lead mx-auto style-max-width" style="max-width: 700px;">100% Organic. Cold-pressed raw vitality with no added sugars or artificial elements.</p>
+            </div>
+        </section>
+
+        <!-- Menu Navigation Filter Shortcuts -->
+        <div class="container text-center my-5">
+            <div class="d-inline-flex gap-2 flex-wrap justify-content-center">
+                <a href="#juices" class="btn btn-outline-success rounded-pill px-4">Cold-Pressed Juices</a>
+                <a href="#smoothies" class="btn btn-outline-success rounded-pill px-4">Superfood Smoothies</a>
+                <a href="#wellness-shots" class="btn btn-outline-success rounded-pill px-4">Wellness Shots</a>
+            </div>
+        </div>
+
+        <!-- Section 1: Cold-Pressed Juices -->
+        <section id="juices" class="container mb-5 section-padding">
+            <div class="border-start border-success border-4 ps-3 mb-4">
+                <h2 class="text-success m-0">Cold-Pressed Juices</h2>
+                <p class="text-muted m-0">Hydrating structural extractions packed with raw plant enzymes</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Item 1: Orange Juice -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/pureor.png" alt="Orange Juice" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Classic Pure Orange</h4>
+                                <span class="fw-bold text-success fs-5">$5.49</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">100% Valencia oranges cold-extracted for peak pure Vitamin C immune defense system delivery.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Rich Vitamins</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Classic Pure Orange" data-price="5.49"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Green Detox -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/greenglow.png" alt="Green Detox" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Signature Green Glow</h4>
+                                <span class="fw-bold text-success fs-5">$6.49</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">Crisp green apples, fresh kiwi slices, organic kale, spinach, celery, and a touch of lime juice.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Detox Body</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Signature Green Glow" data-price="6.49"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Custom Fruit Blend Flight -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/Daily Wellness Tonic.png" alt="Mixed Fruit Extract Flight" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Daily Wellness Tonic</h4>
+                                <span class="fw-bold text-success fs-5">$6.99</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">A vibrant custom structural sorting of cold-pressed kiwi, citrus, and raw botanicals.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Hydration Boost</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Daily Wellness Tonic" data-price="6.99"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/Guava.png" alt="Mixed Fruit Extract Flight" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Guava </h4>
+                                <span class="fw-bold text-success fs-5">$4.99</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">A nutrient-dense tropical fruit high vitamin C content.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Digestive Health</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Guava" data-price="4.99"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+        <div style="height:240px; overflow:hidden;">
+            <img src="assets/images/pineapple2.png" alt="Pineapple Juice" class="w-100 h-100 object-fit-cover">
+        </div>
+
+        <div class="card-body p-4 d-flex flex-column">
+
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="text-success mb-0">Pineapple Paradise</h4>
+                <span class="fw-bold text-success fs-5">$5.99</span>
+            </div>
+
+            <p class="text-muted small flex-grow-1">
+                Fresh pineapple blended into a naturally sweet tropical juice packed with Vitamin C and digestive enzymes.
+            </p>
+
+            <span class="badge bg-light text-dark border rounded-pill px-3 py-1 mt-2">
+                Tropical Refresh
+            </span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Pineapple Paradise" data-price="5.99"><i class="fas fa-plus me-1"></i>Add to Order</button>
+
+        </div>
+    </div>
+</div>  
+<div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+        <div style="height:240px; overflow:hidden;">
+            <img src="assets/images/B3.png" alt="Beetroot Juice" class="w-100 h-100 object-fit-cover">
+        </div>
+
+        <div class="card-body p-4 d-flex flex-column">
+
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="text-success mb-0">Beetroot Energy Boost</h4>
+                <span class="fw-bold text-success fs-5">$5.79</span>
+            </div>
+
+            <p class="text-muted small flex-grow-1">
+                Fresh beetroot with apple and lemon to improve stamina, circulation and natural energy.
+            </p>
+
+            <span class="badge bg-light text-dark border rounded-pill px-3 py-1 mt-2">
+                Heart Healthy
+            </span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Beetroot Energy Boost" data-price="5.79"><i class="fas fa-plus me-1"></i>Add to Order</button>
+
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Section 2: Superfood Smoothies -->
+        <section id="smoothies" class="container my-5 section-padding">
+            <div class="border-start border-success border-4 ps-3 mb-4">
+                <h2 class="text-success m-0">Superfood juices </h2>
+                <p class="text-muted m-0">Thick, blended macro-nutrients optimized for complete meal support</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Item 1: Mango Smoothie -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/menuman.png" alt="Mango Smoothie" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Tropical Mango Crush</h4>
+                                <span class="fw-bold text-success fs-5">$6.99</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">Creamy tropical mango pulp whipped with almond milk and garnished with real fresh mint highlights.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Boost Energy</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Tropical Mango Crush" data-price="6.99"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Berry Blast -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/Antioxidant Berry Blast2.png" alt="Berry Blast" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Antioxidant Berry Blast</h4>
+                                <span class="fw-bold text-success fs-5">$7.29</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">Wild strawberries, blueberries, raspberries, and fresh orange juice reduction layers.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Antioxidant Rich</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Antioxidant Berry Blast" data-price="7.29"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Alternate Premium Mango -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/menumango.png" alt="Mango Mint Smoothie" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Mango Wellness Blend</h4>
+                                <span class="fw-bold text-success fs-5">$7.49</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">Premium Alphonso mango profile layered with cold oat extract fluid engines and natural whey alternatives.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">High Fiber</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Mango Wellness Blend" data-price="7.49"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                        <div style="height: 240px; overflow: hidden;">
+                            <img src="assets/images/carrot.png" alt="Mango Mint Smoothie" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="text-success mb-0">Carrot Wellness Blend</h4>
+                                <span class="fw-bold text-success fs-5">$9.49</span>
+                            </div>
+                            <p class="text-muted small flex-grow-1">Premium pure carrot profile layered with cold oat extract fluid engines.</p>
+                            <span class="badge bg-light text-dark align-self-start border rounded-pill px-3 py-1 mt-2">Nautal energy</span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Carrot Wellness Blend" data-price="9.49"><i class="fas fa-plus me-1"></i>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+        <div style="height:240px; overflow:hidden;">
+            <img src="assets/images/ba3.png" alt="Banana Smoothie" class="w-100 h-100 object-fit-cover">
+        </div>
+
+        <div class="card-body p-4 d-flex flex-column">
+
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="text-success mb-0">Banana Power Smoothie</h4>
+                <span class="fw-bold text-success fs-5">$6.89</span>
+            </div>
+
+            <p class="text-muted small flex-grow-1">
+                Creamy banana blended with milk, honey and oats for long-lasting energy and protein.
+            </p>
+
+            <span class="badge bg-light text-dark border rounded-pill px-3 py-1 mt-2">
+                High Protein
+            </span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Banana Power Smoothie" data-price="6.89"><i class="fas fa-plus me-1"></i>Add to Order</button>
+
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+        <div style="height:240px; overflow:hidden;">
+           <img src="assets/images/K3.png"
+     alt="Kiwi Mint Refresh"
+     class="w-100 h-100 object-fit-cover">
+        </div>
+
+        <div class="card-body p-4 d-flex flex-column">
+
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <h4 class="text-success mb-0">Kiwi Mint Refresh</h4>
+                <span class="fw-bold text-success fs-5">$7.19</span>
+            </div>
+
+            <p class="text-muted small flex-grow-1">
+                Fresh kiwi, mint leaves and yogurt blended into a cool, refreshing smoothie rich in antioxidants.
+            </p>
+
+            <span class="badge bg-light text-dark border rounded-pill px-3 py-1 mt-2">
+                Immune Boost
+            </span>
+                            <button type="button" class="btn btn-success btn-sm rounded-pill mt-3 add-to-cart-btn" data-name="Kiwi Mint Refresh" data-price="7.19"><i class="fas fa-plus me-1"></i>Add to Order</button>
+
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Section 3: Wellness Shots Dynamic Lineup Banner -->
+        <section id="wellness-shots" class="bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <div class="border-start border-success border-4 ps-3 mb-3">
+                            <h2 class="text-success m-0">Concentrated Wellness Shots</h2>
+                        </div>
+                        <p class="text-secondary">Quick, dense, fast-acting biological formulations targeted for direct systemic metabolic activation.</p>
+                        
+                        <div class="list-group list-group-flush bg-transparent mt-4">
+                            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0">
+                                <div>
+                                    <h6 class="text-success mb-0">Ginger Fire Immunity Shot</h6>
+                                    <small class="text-muted">Pure cold-pressed organic ginger root, lemon juice, and cayenne powder.</small>
+                                </div>
+                                <span class="fw-bold text-success me-3">$3.49</span>
+                                <button type="button" class="btn btn-success btn-sm rounded-pill add-to-cart-btn" data-name="Ginger Fire Immunity Shot" data-price="3.49"><i class="fas fa-plus me-1"></i>Add</button>
+                            </div>
+                            <div class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0">
+                                <div>
+                                    <h6 class="text-success mb-0">Golden Turmeric Cellular Defense</h6>
+                                    <small class="text-muted">Raw turmeric root juice extract, black pepper extract catalyst, and pure coconut water.</small>
+                                </div>
+                                <span class="fw-bold text-success me-3">$3.49</span>
+                                <button type="button" class="btn btn-success btn-sm rounded-pill add-to-cart-btn" data-name="Golden Turmeric Cellular Defense" data-price="3.49"><i class="fas fa-plus me-1"></i>Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="rounded overflow-hidden shadow" style="height: 350px;">
+                            <!-- Showcasing the dynamic real shop kitchen bar setting -->
+                            <img src="assets/images/img6.png" alt="Bar Counter Operations" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+ <hr>
+<footer class="py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-5 mb-4">
+                <h2 class="fw-bold"> JUICE </h2>
+                <p class="mt-4 text-muted">
+                    Curating unforgettable moments through organic,
+                    revitalizing ingredients. Discover a world of raw
+                    vitality, cold-pressed cleanses, and timeless
+                    nourishment.
+                </p>
+            </div>
+
+            <div class="col-lg-2 mb-4">
+                <h3 class="fw-bold fs-4">JUICE BAR</h3>
+                <ul class="list-unstyled mt-4">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 mb-4">
+                <h3 class="fw-bold fs-4">COLLECTIONS</h3>
+                <ul class="list-unstyled mt-4">
+                    <li><a href="#">Fresh Smoothies</a></li>
+                    <li><a href="#">Pressed Juices</a></li>
+                    <li><a href="#">Detox Cleanses</a></li>
+                    <li><a href="#">Ingredients</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h3 class="fw-bold fs-4">VISIT US</h3>
+
+                <p class="mt-4">
+                    📍 456 Vitality Lane,<br>
+                    London, UK
+                </p>
+
+                <p>
+                    📅 Open Daily: 7 AM - 8 PM
+                </p>
+
+                <p>
+                    📞 +44 20 7946 0000
+                </p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center pt-3">
+            © 2026 JUICE BAR. ALL RIGHTS RESERVED.
+        </div>
+
+    </div>
+</footer>
+    <!-- Bootstrap 5 Bundle JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

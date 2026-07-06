@@ -1,0 +1,21 @@
+CUSTOMIZATION GUIDE
+
+1. COLORS
+   - Main theme color can be changed in CSS variables:
+     --primary-color
+
+2. MENU ITEMS
+   - Update menu in index.html or menu.html
+   - Add new juice/smoothie cards in product section
+
+3. IMAGES
+   - Replace images inside /assets/images/
+   - Keep same file names or update HTML paths
+
+4. DASHBOARD
+   - Admin dashboard: /admin/dashboard.html
+   - User dashboard: /user/dashboard.html
+
+5. STYLING
+   - Modify style.css for layout changes
+   - Use Bootstrap classes for quick updates

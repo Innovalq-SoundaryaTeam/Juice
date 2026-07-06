@@ -1,0 +1,7 @@
+INSTALLATION GUIDE
+
+1. Clone or download the project folder.
+2. Extract files if downloaded as ZIP.
+3. Open the project directory.
+4. Open "index.html" in any modern browser.
+

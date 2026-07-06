@@ -1,0 +1,299 @@
+ <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | JuiceBar Premium Cold-Pressed Labs</title>
+    <meta name="description" content="Born from a passion for holistic nourishment and the belief that every bottle deserves to be a masterclass in health.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts for Editorial Luxury Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Shared Stylesheet Asset Hooks -->
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- <link rel="stylesheet" href="assets/css/dark-mode.css"> -->
+    
+    <style>
+        /* Editorial layout typography classes matching your layout system */
+        .font-serif-editorial { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; }
+        .font-serif-bold-display { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 1px; }
+        .tracking-luxury { font-family: 'Montserrat', sans-serif; letter-spacing: 4px; text-transform: uppercase; font-size: 0.8rem; }
+        
+        /* Custom Blockquote Styling matching the overlay system in Screenshot 2 */
+        .quote-overlay-box {
+            background-color: #198754; /* Premium brand green */
+            color: #ffffff;
+            padding: 40px;
+            margin-top: -60px;
+            position: relative;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Store Hours Strip Component -->
+    <div class="store-hours-strip" role="note" aria-label="Store Hours Notification">
+        <i class="fas fa-clock me-2"></i> Energy Boost Hours: Monday - Sunday: 7:00 AM - 9:00 PM
+    </div>
+ <header class="navbar-premium">
+      <nav
+        class="navbar navbar-expand-lg container"
+        aria-label="Main Navigation"
+      >
+        <a class="navbar-brand" href="index.html">JUICE</a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- Nav Links in exact case configuration -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="combos.html">Combos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catering.html">Catering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html"> HEALTH TIPS</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="blog-details.html">Blog-details</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coming.html">Coming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">signIn</a>
+            </li>
+          </ul>
+
+          <!-- Boxed UI Controls & Accent User Icon -->
+         <button id="themeToggle" class="btn btn-outline-success">
+  <i class="fas fa-moon"></i>
+</button>
+        </div>
+      </nav>
+    </header>
+<main class="coming-soon-page py-5">
+    <div class="container text-center">
+
+        <span class="badge bg-warning text-dark px-3 py-2 mb-3">
+            Fresh & Healthy
+        </span>
+
+        <h1 class="display-3 fw-bold mb-3">
+            New Seasonal Menu Coming Soon
+        </h1>
+
+        <p class="lead mb-5">
+            We're preparing exciting new juices, smoothies, and healthy treats.
+            Stay tuned for our upcoming seasonal specials!
+        </p>
+
+        <!-- Countdown Timer -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-6 col-md-2 mb-3">
+                <div class="count-box">
+                    <h2 id="days">00</h2>
+                    <p>Days</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <div class="count-box">
+                    <h2 id="hours">00</h2>
+                    <p>Hours</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <div class="count-box">
+                    <h2 id="minutes">00</h2>
+                    <p>Minutes</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <div class="count-box">
+                    <h2 id="seconds">00</h2>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Signup -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                <div class="signup-card p-4 rounded shadow">
+                    <h3 class="mb-3">Get Launch Updates</h3>
+
+                    <p class="mb-4">
+                        Subscribe to receive updates about our new seasonal menu.
+                    </p>
+
+                    <form id="newsletterForm">
+                        <div class="input-group">
+                            <input
+                                type="email"
+                                id="newsletterEmail"
+                                class="form-control"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                            <button class="btn btn-success" type="submit">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="newsletterSuccess" class="alert alert-success mt-3 mb-0 d-none" role="alert">
+                        <i class="fas fa-circle-check me-2"></i>You're subscribed! Watch your inbox for launch updates.
+                    </div>
+
+                    <small id="newsletterHint" class="text-muted d-block mt-3">
+                        Mailchimp-ready newsletter signup form.
+                    </small>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+const countdownDate = new Date("December 31, 2026 23:59:59").getTime();
+
+const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".coming-soon-page").innerHTML =
+            "<h1 class='text-center'>Our Seasonal Menu Has Arrived!</h1>";
+    }
+
+}, 1000);
+
+document.getElementById("newsletterForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var form = e.target;
+    var emailInput = document.getElementById("newsletterEmail");
+    var successBox = document.getElementById("newsletterSuccess");
+    var hint = document.getElementById("newsletterHint");
+
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    successBox.classList.remove("d-none");
+    hint.classList.add("d-none");
+    form.reset();
+
+    setTimeout(function () {
+        successBox.classList.add("d-none");
+        hint.classList.remove("d-none");
+    }, 6000);
+});
+</script>
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <h2 class="fw-bold"> JUICE </h2>
+            <p class="mt-4 text-muted">
+              Curating unforgettable moments through organic, revitalizing
+              ingredients. Discover a world of raw vitality, cold-pressed
+              cleanses, and timeless nourishment.
+            </p>
+          </div>
+
+          <div class="col-lg-2 mb-4">
+            <h3 class="fw-bold fs-4">JUICE BAR</h3>
+            <ul class="list-unstyled mt-4">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Menu</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 mb-4">
+            <h3 class="fw-bold fs-4">COLLECTIONS</h3>
+            <ul class="list-unstyled mt-4">
+              <li><a href="#">Fresh Smoothies</a></li>
+              <li><a href="#">Pressed Juices</a></li>
+              <li><a href="#">Detox Cleanses</a></li>
+              <li><a href="#">Ingredients</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h3 class="fw-bold fs-4">VISIT US</h3>
+
+            <p class="mt-4">
+              📍 456 Vitality Lane,<br />
+              London, UK
+            </p>
+
+            <p>📅 Open Daily: 7 AM - 8 PM</p>
+
+            <p>📞 +44 20 7946 0000</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center pt-3">
+          © 2026 JUICE BAR. ALL RIGHTS RESERVED.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

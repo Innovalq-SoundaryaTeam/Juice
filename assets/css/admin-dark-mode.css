@@ -1,0 +1,208 @@
+/* ==========================================================================
+   JUICEBAR ADMIN — DARK MODE
+   Same token names/palette as the public site's rtl.css, so both sides
+   feel consistent. Loaded alongside dashboard.css / juice-menu.css /
+   settings.css - this file only adds the dark-mode layer on top.
+   ========================================================================== */
+
+body.dark-mode {
+  --brand: #198754;
+  --brand-dark: #146c43;
+  --brand-light: #e9f7ef;
+
+  --bg: #101814;
+  --bg-alt: #16211b;
+  --text: #eef2f0;
+  --text-muted: #a9b6b0;
+  --card-bg: #182420;
+  --border: #29372f;
+  --sidebar-bg: #0d1512;
+  --input-bg: #1c2a24;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body.dark-mode * {
+  border-color: var(--border);
+}
+
+/* ---------- Theme toggle button ---------- */
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+body.dark-mode .theme-toggle-btn {
+  color: #6fe3a5 !important;
+  border-color: #6fe3a5 !important;
+}
+body.dark-mode .theme-toggle-btn:hover {
+  background-color: var(--brand) !important;
+  color: #fff !important;
+}
+
+/* ---------- Sidebar ---------- */
+body.dark-mode .sidebar {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--text);
+  border-color: var(--border);
+}
+body.dark-mode .sidebar h4,
+body.dark-mode .sidebar h3,
+body.dark-mode .sidebar h5,
+body.dark-mode .sidebar h6 {
+  color: var(--text) !important;
+}
+body.dark-mode .sidebar small,
+body.dark-mode .sidebar .menu-title {
+  color: var(--text-muted) !important;
+}
+body.dark-mode .sidebar hr {
+  border-color: var(--border);
+  opacity: 1;
+}
+body.dark-mode .sidebar ul li a {
+  color: var(--text-muted) !important;
+}
+body.dark-mode .sidebar ul li a:hover,
+body.dark-mode .sidebar ul li.active a {
+  color: #fff !important;
+  background-color: var(--brand) !important;
+}
+body.dark-mode .admin-box {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border) !important;
+}
+body.dark-mode .logout-btn,
+body.dark-mode .logout {
+  color: var(--text-muted) !important;
+}
+body.dark-mode .logout-btn:hover,
+body.dark-mode .logout:hover {
+  color: #fff !important;
+}
+
+/* ---------- Topbar ---------- */
+body.dark-mode .topbar {
+  background-color: var(--card-bg) !important;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+body.dark-mode .topbar h2,
+body.dark-mode .topbar h5,
+body.dark-mode .topbar p {
+  color: var(--text) !important;
+}
+body.dark-mode .date-box,
+body.dark-mode .notify,
+body.dark-mode .profile {
+  background-color: var(--bg-alt) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* ---------- Cards (dashboard / quick actions / general) ---------- */
+body.dark-mode .dash-card,
+body.dark-mode .quick-card,
+body.dark-mode .order-card,
+body.dark-mode .card-box,
+body.dark-mode .card {
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow);
+}
+body.dark-mode .dash-card h1,
+body.dark-mode .dash-card h5,
+body.dark-mode .quick-card h5,
+body.dark-mode .card-box h4,
+body.dark-mode .card-box h5 {
+  color: var(--text) !important;
+}
+body.dark-mode .dash-card p,
+body.dark-mode .quick-card small,
+body.dark-mode .card-box p {
+  color: var(--text-muted) !important;
+}
+body.dark-mode .section-title {
+  color: var(--text) !important;
+}
+
+/* ---------- Tables ---------- */
+body.dark-mode table,
+body.dark-mode .table {
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  --bs-table-bg: var(--card-bg);
+  --bs-table-color: var(--text);
+  --bs-table-hover-bg: var(--bg-alt);
+  --bs-table-hover-color: var(--text);
+  --bs-table-striped-bg: var(--bg-alt);
+  --bs-table-border-color: var(--border);
+}
+body.dark-mode .table thead th {
+  border-color: var(--border) !important;
+}
+
+/* ---------- Forms ---------- */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: var(--input-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+body.dark-mode .form-control::placeholder {
+  color: var(--text-muted);
+}
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: var(--input-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--brand) !important;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+body.dark-mode label {
+  color: var(--text) !important;
+}
+
+/* ---------- Badges kept legible ---------- */
+body.dark-mode .badge.bg-light {
+  background-color: #24332b !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* ---------- Buttons ---------- */
+body.dark-mode .btn-outline-success {
+  color: #6fe3a5 !important;
+  border-color: #6fe3a5 !important;
+}
+body.dark-mode .btn-outline-success:hover {
+  background-color: var(--brand) !important;
+  color: #fff !important;
+}
+body.dark-mode .btn-light {
+  background-color: var(--bg-alt) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* ---------- Avatars ---------- */
+body.dark-mode .avatar,
+body.dark-mode .big-avatar,
+body.dark-mode .admin-img {
+  background-color: var(--brand) !important;
+  color: #fff !important;
+}
+
+/* ---------- hr ---------- */
+body.dark-mode hr {
+  border-color: var(--border);
+  opacity: 1;
+}
