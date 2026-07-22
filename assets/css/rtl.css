@@ -336,6 +336,31 @@ body.dark-mode .hero-soft-editorial .vertical-divider {
   border-color: var(--border);
 }
 body.dark-mode .card { box-shadow: var(--shadow); }
+
+/* ---------- Blog article grid (blog.html) ----------
+   Fixed-height image area (with a neutral fallback background so a
+   missing/broken image doesn't leave a huge blank gap) + a flex-column
+   card body with the button pinned to the bottom via margin-top:auto,
+   so "Read More" lines up across every card in the row regardless of
+   how long each excerpt is or whether an image failed to load. */
+.blog-article .card {
+  display: flex;
+  flex-direction: column;
+}
+.blog-article .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  background-color: var(--bg-alt);
+}
+.blog-article .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.blog-article .card-body .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
 body.dark-mode .badge.bg-light {
   background-color: #24332b !important;
   color: var(--text) !important;
