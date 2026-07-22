@@ -118,12 +118,17 @@ document.addEventListener("DOMContentLoaded", function () {
     badge.style.display = count > 0 ? "flex" : "none";
   }
 
-  /* ---- Inject the cart icon into the navbar, next to the theme toggle ---- */
+  /* ---- Inject the cart icon + auth buttons into the navbar ----
+     Order: Theme -> RTL -> Login (outline) -> Sign Up (filled) -> Cart
+     Skipped entirely on login.html / register.html (no themeToggle there). */
   function injectCartIcon() {
     if (document.getElementById("cartToggle")) return;
 
     const wrapper = document.createElement("div");
     wrapper.className = "nav-controls";
+
+    const currentPage = window.location.pathname.split("/").pop();
+    const isAuthPage = currentPage === "login.html" || currentPage === "register.html";
 
     const cartBtn = document.createElement("button");
     cartBtn.id = "cartToggle";
@@ -134,8 +139,24 @@ document.addEventListener("DOMContentLoaded", function () {
       '<i class="fas fa-basket-shopping"></i><span id="cartCount" class="cart-count">0</span>';
 
     themeToggle.parentNode.insertBefore(wrapper, themeToggle);
-    if (rtlToggle) wrapper.appendChild(rtlToggle);
     wrapper.appendChild(themeToggle);
+    if (rtlToggle) wrapper.appendChild(rtlToggle);
+
+    if (!isAuthPage) {
+      const loginBtn = document.createElement("a");
+      loginBtn.href = "login.html";
+      loginBtn.className = "btn btn-outline-success btn-sm rounded-pill nav-auth-btn";
+      loginBtn.textContent = "Login";
+
+      const signupBtn = document.createElement("a");
+      signupBtn.href = "register.html";
+      signupBtn.className = "btn btn-success btn-sm rounded-pill nav-auth-btn";
+      signupBtn.textContent = "Sign Up";
+
+      wrapper.appendChild(loginBtn);
+      wrapper.appendChild(signupBtn);
+    }
+
     wrapper.appendChild(cartBtn);
 
     cartBtn.addEventListener("click", openCartModal);

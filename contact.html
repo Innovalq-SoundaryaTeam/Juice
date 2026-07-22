@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JuiceBar | Premium Organic Cold-Pressed Vitality</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23198754'/%3E%3Cpath d='M50 20c14 10 22 22 22 35a22 22 0 1 1-44 0c0-13 8-25 22-35z' fill='white'/%3E%3C/svg%3E">
     <meta
       name="description"
       content="Where raw botanical integrity meets premium liquid health engineering. Fresh cold-pressed daily extracts."
@@ -91,7 +92,7 @@
     <!-- MAIN BRAND NAVBAR -->
     <header class="navbar-premium">
       <nav
-        class="navbar navbar-expand-lg container"
+        class="navbar navbar-expand-xl container"
         aria-label="Main Navigation"
       >
         <a class="navbar-brand" href="index.html">JUICE</a>
@@ -133,13 +134,7 @@
             <a class="nav-link" href="blog-details.html">Blog details</a>
           </li>
             <li class="nav-item">
-              <a class="nav-link" href="coming.html">Coming</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-success btn-sm rounded-pill ms-lg-3" href="login.html">Sign In</a>
             </li>
           </ul>
 
@@ -152,7 +147,44 @@
     </header>
 
 
-    <main class="section-padding" style="margin-top:100px;">
+    <!-- Page Hero -->
+    <section class="hero-catering">
+      <div class="container text-center">
+        <p class="tracking-luxury text-white mb-3" style="opacity: 0.85">We'd Love To Hear From You</p>
+        <h1 class="display-5 fw-bold text-white mb-0">Get In Touch</h1>
+      </div>
+    </section>
+
+    <!-- Quick Contact Options -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-md-4">
+            <div class="testimonial-card p-4 h-100 shadow-sm">
+              <i class="fas fa-phone fs-2 text-success mb-3"></i>
+              <h5 class="fw-bold">Call Us</h5>
+              <p class="text-muted mb-0">+44 20 7946 0000<br>Mon&ndash;Sun, 7AM&ndash;9PM</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card p-4 h-100 shadow-sm">
+              <i class="fas fa-envelope fs-2 text-success mb-3"></i>
+              <h5 class="fw-bold">Email Us</h5>
+              <p class="text-muted mb-0">hello@juicebar.com<br>We reply within 24 hours</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card p-4 h-100 shadow-sm">
+              <i class="fas fa-location-dot fs-2 text-success mb-3"></i>
+              <h5 class="fw-bold">Visit Us</h5>
+              <p class="text-muted mb-0">456 Vitality Lane,<br>London, UK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="section-padding">
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-5">
@@ -188,6 +220,59 @@
             </div>
         </div>
     </main>
+
+    <!-- FAQ -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="tracking-luxury text-success mb-2" style="font-weight: 600">FAQs</p>
+          <h2 class="display-6 font-serif-editorial text-dark">Common Questions</h2>
+        </div>
+        <div class="accordion mx-auto" style="max-width: 800px" id="contactFaq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                Do you offer same-day delivery?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFaq">
+              <div class="accordion-body">Yes — orders placed before 2 PM are delivered the same day within our local service area. Orders placed after 2 PM are delivered the next morning.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Can I customize a juice or smoothie recipe?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">Absolutely. Reach out via the form above or call us, and our team will build a custom blend around your taste and health goals.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Do you cater offices and private events?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">Yes — visit our <a href="catering.html">Catering</a> page to see packages for offices, weddings, and private events of any size.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                What are your store hours?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">We're open daily from 7:00 AM to 9:00 PM, including weekends and most holidays.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
  <hr>
 <footer class="py-5 bg-light">
     <div class="container">
@@ -228,16 +313,16 @@
                 <h3 class="fw-bold fs-4">VISIT US</h3>
 
                 <p class="mt-4">
-                    📍 456 Vitality Lane,<br>
+                    <i class="fas fa-location-dot me-2 text-success"></i>456 Vitality Lane,<br>
                     London, UK
                 </p>
 
                 <p>
-                    📅 Open Daily: 7 AM - 8 PM
+                    <i class="fas fa-clock me-2 text-success"></i>Open Daily: 7 AM - 8 PM
                 </p>
 
                 <p>
-                    📞 +44 20 7946 0000
+                    <i class="fas fa-phone me-2 text-success"></i>+44 20 7946 0000
                 </p>
             </div>
 

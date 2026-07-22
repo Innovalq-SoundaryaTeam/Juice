@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Catering - Aura Juice Bar</title>
+  <title>Health Tips - JUICE</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23198754'/%3E%3Cpath d='M50 20c14 10 22 22 22 35a22 22 0 1 1-44 0c0-13 8-25 22-35z' fill='white'/%3E%3C/svg%3E">
 
   <!-- Bootstrap CSS -->
   <link
@@ -30,7 +31,7 @@
     
  <header class="navbar-premium">
     <nav
-      class="navbar navbar-expand-lg container"
+      class="navbar navbar-expand-xl container"
       aria-label="Main Navigation"
     >
       <a class="navbar-brand" href="index.html">JUICE</a>
@@ -71,14 +72,8 @@
             <a class="nav-link" href="blog-details.html">Blog details</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="coming.html">Coming</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item">
-              <a class="btn btn-outline-success btn-sm rounded-pill ms-lg-3" href="login.html">Sign In</a>
-            </li>
 
     
         </ul>
@@ -199,21 +194,33 @@
 
       <!-- Sidebar -->
       <div class="col-lg-4">
-        <div class="card p-4 mb-4">
-          <h4>Categories</h4>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item sidebar-category" data-category="nutrition" role="button">Nutrition</li>
-            <li class="list-group-item sidebar-category" data-category="detox" role="button">Detox</li>
-            <li class="list-group-item sidebar-category" data-category="recipes" role="button">Recipes</li>
-            <li class="list-group-item sidebar-category" data-category="wellness" role="button">Wellness</li>
-          </ul>
-        </div>
+        <div class="sticky-top" style="top: 110px;">
+          <div class="card p-4 mb-4">
+            <h4>Categories</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item sidebar-category" data-category="nutrition" role="button">Nutrition</li>
+              <li class="list-group-item sidebar-category" data-category="detox" role="button">Detox</li>
+              <li class="list-group-item sidebar-category" data-category="recipes" role="button">Recipes</li>
+              <li class="list-group-item sidebar-category" data-category="wellness" role="button">Wellness</li>
+            </ul>
+          </div>
 
-        <div class="card p-4">
-          <h4>Popular Posts</h4>
-          <p>Green Detox Guide</p>
-          <p>Top Smoothie Recipes</p>
-          <p>Healthy Morning Drinks</p>
+          <div class="card p-4 mb-4">
+            <h4>Popular Posts</h4>
+            <p><a href="blog-details.html?post=green-detox-juices" class="text-decoration-none">Green Detox Guide</a></p>
+            <p><a href="blog-details.html?post=tropical-smoothie-spotlight" class="text-decoration-none">Top Smoothie Recipes</a></p>
+            <p class="mb-0"><a href="blog-details.html?post=hydration-fresh-juices" class="text-decoration-none">Healthy Morning Drinks</a></p>
+          </div>
+
+          <div class="card p-4 text-center bg-success text-white">
+            <i class="fas fa-envelope-open-text fs-3 mb-2"></i>
+            <h5 class="fw-bold">Stay Fresh</h5>
+            <p class="small mb-3">Get new health tips &amp; recipes in your inbox every week.</p>
+            <form class="d-flex gap-2" id="blogSubscribeForm" onsubmit="return false;">
+              <input type="email" class="form-control form-control-sm" placeholder="Your email" required>
+              <button type="submit" class="btn btn-light btn-sm text-success fw-semibold">Subscribe</button>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -258,12 +265,12 @@
           <h3 class="fw-bold fs-4">VISIT US</h3>
 
           <p class="mt-4">
-            📍 456 Vitality Lane,<br>
+            <i class="fas fa-location-dot me-2 text-success"></i>456 Vitality Lane,<br>
             London, UK
           </p>
 
-          <p>📅 Open Daily: 7 AM - 8 PM</p>
-          <p>📞 +44 20 7946 0000</p>
+          <p><i class="fas fa-clock me-2 text-success"></i>Open Daily: 7 AM - 8 PM</p>
+          <p><i class="fas fa-phone me-2 text-success"></i>+44 20 7946 0000</p>
         </div>
       </div>
 
@@ -284,6 +291,19 @@
   <!-- Blog category filtering -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      var subscribeForm = document.getElementById('blogSubscribeForm');
+      if (subscribeForm) {
+        subscribeForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var input = subscribeForm.querySelector('input[type="email"]');
+          input.value = '';
+          var btn = subscribeForm.querySelector('button');
+          var original = btn.textContent;
+          btn.textContent = 'Subscribed!';
+          setTimeout(function () { btn.textContent = original; }, 2500);
+        });
+      }
+
       var filterButtons = document.querySelectorAll('.blog-filter-btn');
       var sidebarCategories = document.querySelectorAll('.sidebar-category');
       var articles = document.querySelectorAll('.blog-article');

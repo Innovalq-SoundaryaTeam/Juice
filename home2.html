@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JuiceBar | Modern Layout</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23198754'/%3E%3Cpath d='M50 20c14 10 22 22 22 35a22 22 0 1 1-44 0c0-13 8-25 22-35z' fill='white'/%3E%3C/svg%3E">
+    <meta
+      name="description"
+      content="Where raw botanical integrity meets premium liquid health engineering. Fresh cold-pressed daily extracts."
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/rtl.css" />
+
+    <style>
+      .font-serif-editorial {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .font-serif-bold-display {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .tracking-luxury {
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+      .btn-premium-dark {
+        background-color: #198754;
+        color: #fff;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+      }
+      .btn-premium-dark:hover { background-color: #146c43; color: #fff; }
+      .btn-premium-outline {
+        background-color: transparent;
+        color: #198754;
+        border: 1px solid #198754;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        padding: 12px 30px;
+        transition: all 0.3s ease;
+      }
+      .btn-premium-outline:hover { background-color: #198754; color: #fff; }
+
+      /* ---- Modern layout specific ---- */
+      .split-hero {
+        background-color: var(--brand-light);
+      }
+      body.dark-mode .split-hero { background-color: var(--bg-alt); }
+
+      .stat-pill {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 10px 22px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .zig-row img {
+        border-radius: 18px;
+      }
+
+      .combo-spotlight {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .combo-list-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .combo-list-item:last-child { border-bottom: none; }
+      .combo-list-item img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .quote-slide { display: none; }
+      .quote-slide.active { display: block; }
+      .quote-nav-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--card-bg);
+        color: var(--brand);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .catering-split {
+        background-color: var(--card-bg);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .layout-switch-banner {
+        background-color: #0d1512;
+        color: #d9f5e6;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+      }
+      .layout-switch-banner a {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout-switch-banner">
+      You're viewing our <strong>Modern Layout</strong> concept —
+      <a href="index.html">switch back to the Classic homepage</a>
+    </div>
+
+    <div class="store-hours-strip">
+      <i class="fas fa-clock me-2"></i> Energy Boost Hours: Monday - Sunday: 7:00 AM - 9:00 PM
+    </div>
+
+    <header class="navbar-premium">
+      <nav class="navbar navbar-expand-xl container" aria-label="Main Navigation">
+        <a class="navbar-brand" href="index.html">JUICE</a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="combos.html">Combos</a></li>
+            <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">HEALTH TIPS</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog details</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+
+          <button id="themeToggle" class="btn btn-outline-success">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ================= SPLIT HERO ================= -->
+      <section class="split-hero py-5">
+        <div class="container py-4">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <p class="tracking-luxury text-success mb-3">The Art of Cold-Extraction</p>
+              <h1 class="display-3 font-serif-bold-display mb-4" style="line-height: 1.15">
+                Pure Raw <span class="font-serif-editorial">Vitality</span>,<br>
+                Poured Daily.
+              </h1>
+              <p class="mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8; max-width: 480px;">
+                100% natural, living enzymes crafted with high fidelity integrity.
+                No compromises, zero fillers, maximum systemic hydration.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <a href="menu.html" class="btn btn-premium-dark rounded-pill px-4 py-3 text-uppercase fw-semibold">Explore Menu</a>
+                <a href="combos.html" class="btn btn-premium-outline rounded-pill">View Combos</a>
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="stat-pill"><i class="fas fa-leaf text-success"></i> 100% Organic</span>
+                <span class="stat-pill"><i class="fas fa-star text-success"></i> 4.9 Rated</span>
+                <span class="stat-pill"><i class="fas fa-truck text-success"></i> Same-Day Delivery</span>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="overflow-hidden rounded-4 shadow" style="height: 480px;">
+                <img src="assets/images/image.png" alt="Fresh cold-pressed juice" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ZIG-ZAG PROCESS ================= -->
+      <section class="py-5 bg-white">
+        <div class="container py-4">
+          <div class="text-center mb-5">
+            <p class="tracking-luxury text-success mb-2" style="font-weight: 600">Our Process</p>
+            <h2 class="display-5 font-serif-editorial text-dark">From Harvest To Glass</h2>
+          </div>
+
+          <div class="row align-items-center g-5 zig-row mb-5">
+            <div class="col-md-6">
+              <div class="overflow-hidden" style="height: 360px;">
+                <img src="assets/images/hero2.png" alt="Cold-pressing process" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p class="tracking-luxury text-success mb-2" style="font-weight: 600">Step 01</p>
+              <h3 class="font-serif-bold-display mb-3">Hand-Selected Produce</h3>
+              <p class="text-secondary" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                We source directly from organic growers every morning, choosing only
+                fruits and vegetables at peak ripeness for maximum nutrient density.
+              </p>
+            </div>
+          </div>
+
+          <div class="row align-items-center g-5 zig-row">
+            <div class="col-md-6 order-md-2">
+              <div class="overflow-hidden" style="height: 360px;">
+                <img src="assets/images/hero3.png" alt="Cold-pressed bottling" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+              <p class="tracking-luxury text-success mb-2" style="font-weight: 600">Step 02</p>
+              <h3 class="font-serif-bold-display mb-3">Slow, Cold-Pressed Extraction</h3>
+              <p class="text-secondary" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                Our hydraulic press extracts juice without heat or oxidation, preserving
+                living enzymes and vitamins that heat-based juicing destroys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= COMBO SPOTLIGHT ================= -->
+      <section class="py-5" style="background-color: var(--bg-alt);">
+        <div class="container py-4">
+          <div class="text-center mb-5">
+            <p class="tracking-luxury text-success mb-2" style="font-weight: 600">Curated Pairings</p>
+            <h2 class="display-5 font-serif-editorial text-dark">Popular Combo Spotlight</h2>
+          </div>
+
+          <div class="combo-spotlight shadow-sm">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="h-100" style="min-height: 320px;">
+                  <img src="assets/images/menumango.png" alt="Tropical Mango Hydration" class="w-100 h-100 object-fit-cover">
+                </div>
+              </div>
+              <div class="col-md-7 p-5">
+                <p class="tracking-luxury text-success mb-2" style="font-weight: 600">Most Popular</p>
+                <h3 class="font-serif-bold-display mb-3">Tropical Mango Hydration</h3>
+                <p class="text-secondary mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                  Mango, coconut water and lime blended for a naturally electrolyte-rich
+                  refresher — our best-selling combo, three days running.
+                </p>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                  <span class="fw-bold fs-3 text-success">$8.49</span>
+                  <button class="btn btn-success rounded-pill px-4 add-to-cart-btn" data-name="Tropical Mango Hydration" data-price="8.49">
+                    Add To Order
+                  </button>
+                </div>
+
+                <div class="combo-list-item">
+                  <img src="assets/images/coconutmilk.png" alt="Morning Citrus Blast">
+                  <div class="flex-grow-1">
+                    <h6 class="mb-0 fw-bold">Morning Citrus Blast</h6>
+                    <small class="text-muted">$6.99</small>
+                  </div>
+                  <button class="btn btn-outline-success btn-sm rounded-pill add-to-cart-btn" data-name="Morning Citrus Blast" data-price="6.99">Add</button>
+                </div>
+                <div class="combo-list-item">
+                  <img src="assets/images/Antioxidant Berry Flight.png" alt="Antioxidant Berry Flight">
+                  <div class="flex-grow-1">
+                    <h6 class="mb-0 fw-bold">Antioxidant Berry Flight</h6>
+                    <small class="text-muted">$7.99</small>
+                  </div>
+                  <button class="btn btn-outline-success btn-sm rounded-pill add-to-cart-btn" data-name="Antioxidant Berry Flight" data-price="7.99">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a href="combos.html" class="text-success text-decoration-none fw-semibold text-uppercase" style="letter-spacing: 1px; font-size: 0.9rem">
+              View All Combos <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIAL SLIDER ================= -->
+      <section class="py-5 bg-white">
+        <div class="container py-4 text-center">
+          <p class="tracking-luxury text-success mb-2" style="font-weight: 600">Testimonials</p>
+          <h2 class="display-5 font-serif-editorial text-dark mb-5">Loved By Our Community</h2>
+
+          <div class="mx-auto" style="max-width: 700px;">
+            <div class="quote-slide active">
+              <i class="fas fa-quote-left fs-1 text-success opacity-25 mb-3 d-block"></i>
+              <p class="fs-5 text-secondary mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                "The Green Detox has genuinely changed my mornings. I actually crave it now
+                instead of coffee, and I can taste the difference cold-pressing makes."
+              </p>
+              <h6 class="fw-bold mb-0">Ravi Menon</h6>
+              <small class="text-muted">Regular Customer</small>
+            </div>
+            <div class="quote-slide">
+              <i class="fas fa-quote-left fs-1 text-success opacity-25 mb-3 d-block"></i>
+              <p class="fs-5 text-secondary mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                "We booked the Premium catering package for our office offsite and it was
+                flawless — beautifully presented and everyone asked where we ordered from."
+              </p>
+              <h6 class="fw-bold mb-0">Sara Whitfield</h6>
+              <small class="text-muted">Event Planner</small>
+            </div>
+            <div class="quote-slide">
+              <i class="fas fa-quote-left fs-1 text-success opacity-25 mb-3 d-block"></i>
+              <p class="fs-5 text-secondary mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                "Love that every bottle is traceable back to the farm. The Antioxidant
+                Berry Flight is my go-to after training sessions."
+              </p>
+              <h6 class="fw-bold mb-0">Daniel Okoye</h6>
+              <small class="text-muted">Fitness Coach</small>
+            </div>
+
+            <div class="d-flex justify-content-center gap-3 mt-4">
+              <button type="button" class="quote-nav-btn" id="quotePrev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+              <button type="button" class="quote-nav-btn" id="quoteNext" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CATERING CTA ================= -->
+      <section class="py-5" style="background-color: var(--bg-alt);">
+        <div class="container py-4">
+          <div class="catering-split shadow-sm">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-6">
+                <div style="height: 340px;">
+                  <img src="assets/images/tropical-mix.jpg" alt="Catering setup" class="w-100 h-100 object-fit-cover">
+                </div>
+              </div>
+              <div class="col-md-6 p-5">
+                <p class="tracking-luxury text-success mb-3" style="font-weight: 600">Private Events &amp; Offices</p>
+                <h2 class="font-serif-bold-display mb-3">Bring Fresh Vitality To Your Next Event</h2>
+                <p class="text-secondary mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1.8;">
+                  From boardroom meetings to weddings, our catering team builds a custom
+                  juice bar experience tailored to your headcount and theme.
+                </p>
+                <a href="catering.html" class="btn btn-premium-dark rounded-pill px-4 py-3 text-uppercase fw-semibold">Get a Catering Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <hr />
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <h2 class="fw-bold"> JUICE </h2>
+            <p class="mt-4 text-muted">
+              Curating unforgettable moments through organic, revitalizing
+              ingredients. Discover a world of raw vitality, cold-pressed
+              cleanses, and timeless nourishment.
+            </p>
+          </div>
+
+          <div class="col-lg-2 mb-4">
+            <h3 class="fw-bold fs-4">JUICE BAR</h3>
+            <ul class="list-unstyled mt-4">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="menu.html">Our Menu</a></li>
+              <li><a href="combos.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 mb-4">
+            <h3 class="fw-bold fs-4">COLLECTIONS</h3>
+            <ul class="list-unstyled mt-4">
+              <li><a href="menu.html#smoothies">Fresh Smoothies</a></li>
+              <li><a href="menu.html#juices">Pressed Juices</a></li>
+              <li><a href="menu.html#wellness-shots">Detox Cleanses</a></li>
+              <li><a href="about.html">Ingredients</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h3 class="fw-bold fs-4">VISIT US</h3>
+
+            <p class="mt-4">
+              <i class="fas fa-location-dot me-2 text-success"></i>456 Vitality Lane,<br />
+              London, UK
+            </p>
+
+            <p><i class="fas fa-clock me-2 text-success"></i>Open Daily: 7 AM - 8 PM</p>
+
+            <p><i class="fas fa-phone me-2 text-success"></i>+44 20 7946 0000</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center pt-3">
+          © 2026 JUICE BAR. ALL RIGHTS RESERVED.
+          <span class="d-block mt-2 small">
+            <a href="index.html" class="text-muted">Viewing Modern Layout — switch to Classic Home</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        var slides = document.querySelectorAll('.quote-slide');
+        var idx = 0;
+        function show(i) {
+          slides.forEach(function (s, si) { s.classList.toggle('active', si === i); });
+        }
+        document.getElementById('quotePrev').addEventListener('click', function () {
+          idx = (idx - 1 + slides.length) % slides.length;
+          show(idx);
+        });
+        document.getElementById('quoteNext').addEventListener('click', function () {
+          idx = (idx + 1) % slides.length;
+          show(idx);
+        });
+      })();
+    </script>
+  </body>
+</html>
