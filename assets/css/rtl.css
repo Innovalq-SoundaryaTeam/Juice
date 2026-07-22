@@ -116,6 +116,13 @@ body.dark-mode .store-hours-strip {
 }
 .navbar-premium .navbar-toggler .fa-bars { color: var(--text); }
 
+/* Footer brand name must match the header's font/color exactly */
+footer .footer-brand {
+  font-family: "Playfair Display", serif;
+  color: var(--brand) !important;
+  letter-spacing: 3px;
+}
+
 /* Auth buttons injected next to theme/RTL/cart controls */
 .nav-auth-btn {
   font-size: 0.8rem;
