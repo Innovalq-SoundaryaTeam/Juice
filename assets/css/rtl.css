@@ -115,6 +115,24 @@ body.dark-mode .store-hours-strip {
   border-radius: 2px;
 }
 .navbar-premium .navbar-toggler .fa-bars { color: var(--text); }
+.navbar-premium .dropdown-toggle::after { vertical-align: 2px; }
+
+body.dark-mode .dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+}
+body.dark-mode .dropdown-item {
+  color: var(--text);
+}
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item:focus {
+  background-color: var(--bg-alt);
+  color: var(--brand);
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--brand);
+}
 
 /* Footer brand name must match the header's font/color exactly */
 footer .footer-brand {
@@ -222,14 +240,22 @@ body.dark-mode #cartToggle {
   transform: translateY(-3px);
 }
 
-/* ---------- Testimonial cards (home page) ---------- */
+/* ---------- Testimonial cards (home page) ----------
+   Flex column so the avatar/name row is pinned to the bottom of every
+   card (via .mt-auto below) regardless of how long each quote is —
+   otherwise the avatars land at different heights across the row. */
 .testimonial-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   color: var(--text);
+  display: flex;
+  flex-direction: column;
 }
 .testimonial-card .text-secondary {
   color: var(--text-muted) !important;
+}
+.testimonial-card h6 {
+  color: var(--text);
 }
 
 /* ---------- Hero sections ---------- */
