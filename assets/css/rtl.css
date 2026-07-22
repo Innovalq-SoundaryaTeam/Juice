@@ -197,6 +197,24 @@ body.dark-mode #cartToggle {
   padding: 0 4px;
 }
 
+/* ---------- Footer social icons ---------- */
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand);
+  color: #fff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.footer-social-icon:hover {
+  background-color: var(--brand-dark);
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
 /* ---------- Testimonial cards (home page) ---------- */
 .testimonial-card {
   background-color: var(--card-bg);
@@ -219,6 +237,24 @@ body.dark-mode #cartToggle {
 
 .hero-section
 body.dark-mode .hero-section.bg-success { background-color: #0e5132 !important; }
+
+/* ---------- Immersive article hero (blog-details.html) ---------- */
+.post-hero {
+  background-size: cover;
+  background-position: center;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.post-hero-overlay {
+  width: 100%;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  background: linear-gradient(rgba(10, 20, 15, 0.35), rgba(10, 20, 15, 0.65));
+}
 
 /* ---------- Soft-masked editorial hero (about.html) ----------
    Image brightness is dialed down with a CSS filter on a ::before layer

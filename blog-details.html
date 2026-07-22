@@ -98,10 +98,13 @@
   </header>
 
 <!-- Hero -->
-<section class="hero-catering">
-  <div class="container text-center">
-    <h1 id="postTitle">5 Benefits of Green Detox Juices</h1>
-    <p>Published by Aura Juice Bar</p>
+<section class="post-hero" id="postHero" style="background-image: url('assets/images/Detox Body.jpeg');">
+  <div class="post-hero-overlay">
+    <div class="container text-center text-white">
+      <p class="tracking-luxury mb-2" style="opacity: 0.85">Health Tips &amp; Wellness</p>
+      <h1 id="postTitle" class="display-4 fw-bold text-white">5 Benefits of Green Detox Juices</h1>
+      <p class="mb-0 text-white" style="opacity: 0.85">Published by JUICE Wellness Team</p>
+    </div>
   </div>
 </section>
 
@@ -242,6 +245,12 @@
             revitalizing ingredients. Discover a world of raw
             vitality, cold-pressed cleanses, and timeless nourishment.
           </p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="footer-social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          </div>
         </div>
 
         <div class="col-lg-2 mb-4">
@@ -357,8 +366,9 @@
       var slug = params.get('post');
       var post = posts[slug] || posts['green-detox-juices'];
 
-      document.title = post.title + ' - Aura Juice Bar';
+      document.title = post.title + ' - JUICE';
       document.getElementById('postTitle').textContent = post.title;
+      document.getElementById('postHero').style.backgroundImage = "url('" + post.image + "')";
       document.getElementById('postImage').src = post.image;
       document.getElementById('postImage').alt = post.title;
       document.getElementById('postSubheading').textContent = post.subheading;

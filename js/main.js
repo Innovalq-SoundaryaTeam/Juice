@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!cart.length) return;
       saveCart([]);
       renderCartModal();
-      showToast("🎉 Order placed! Your fresh drinks are being prepared.");
+      showToast("Order placed! Your fresh drinks are being prepared.");
       bootstrap.Modal.getInstance(document.getElementById("cartModal"))?.hide();
     });
   }
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cart.push({ id: key, name, price, qty: 1 });
     }
     saveCart(cart);
-    showToast(`✔ Added "${name}" to your order`);
+    showToast(`Added "${name}" to your order`);
   }
 
   function showToast(message) {
