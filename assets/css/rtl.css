@@ -245,6 +245,9 @@ body.dark-mode .blog-hero-panel {
   footer .row > div:first-child {
     padding-right: 2.5rem;
   }
+  footer .row > div:nth-child(2) {
+    padding-left: 1.5rem;
+  }
 }
 
 /* ---------- Footer social icons ---------- */
