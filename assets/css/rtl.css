@@ -222,6 +222,18 @@ body.dark-mode #cartToggle {
   padding: 0 4px;
 }
 
+/* ---------- Blog hero panel (blog.html) ----------
+   Uses the light brand accent in light mode. In dark mode the sitewide
+   rule forces h1/h2 text to var(--text) (near-white); if this panel kept
+   its light background, that would produce invisible white-on-white
+   text, so the panel itself switches to a dark surface in dark mode. */
+.blog-hero-panel {
+  background-color: var(--brand-light);
+}
+body.dark-mode .blog-hero-panel {
+  background-color: var(--bg-alt);
+}
+
 /* ---------- Footer social icons ---------- */
 .footer-social-icon {
   width: 40px;
