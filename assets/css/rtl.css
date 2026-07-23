@@ -234,6 +234,19 @@ body.dark-mode .blog-hero-panel {
   background-color: var(--bg-alt);
 }
 
+/* ---------- Footer column spacing ----------
+   The brand column (logo + paragraph + social icons) has noticeably
+   more content than the plain link-list columns next to it, so even
+   with equal-width columns its text runs close to the column edge and
+   crowds the next column's heading. Give it a bit of extra right
+   padding on larger screens so "JUICE" and "JUICE BAR" don't look
+   like they're touching. */
+@media (min-width: 992px) {
+  footer .row > div:first-child {
+    padding-right: 2.5rem;
+  }
+}
+
 /* ---------- Footer social icons ---------- */
 .footer-social-icon {
   width: 40px;
